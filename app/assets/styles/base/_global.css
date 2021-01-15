@@ -6,6 +6,18 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+ul {
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -17,6 +29,7 @@ p {
 
 a {
     text-decoration: none;
+    color: #fff;
 }
 
 .highlight {

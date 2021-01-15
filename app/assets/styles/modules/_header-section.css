@@ -1,0 +1,40 @@
+.header-section {
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    background: #000;
+
+    &--display-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__upper-nav {
+        padding: .1rem 1rem;
+        color: #fff;
+        height: 100%;
+        background: rgba(245, 236, 236, 0.1);
+
+        ul {
+            padding: 0 5rem;
+        }
+
+        li {
+            display: flex;
+        }
+
+        li i {
+            color: $subColor;
+            padding-right: 1rem;
+            font-size: 1.4rem;
+        }
+
+    }
+
+    &__lower-nav {}
+
+    &__logo {}
+
+
+}

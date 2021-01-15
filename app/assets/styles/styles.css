@@ -1,5 +1,5 @@
-$mainBlue: #2f5572;
-
-body{
-    color: $mainBlue;
-}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto:wght@300&display=swap');
+@import "normalize.css";
+@import "base/_global.css";
+@import "modules/_landing-section";
+@import "modules/_btn.css";

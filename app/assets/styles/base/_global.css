@@ -1,0 +1,24 @@
+$mainColor: rgb(240, 56, 86);
+$subColor: #E22A2E;
+$subColorHovered: #da191c;
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.highlight {
+    color: $mainColor;
+}

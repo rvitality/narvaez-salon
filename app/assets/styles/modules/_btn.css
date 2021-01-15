@@ -1,0 +1,17 @@
+.btn {
+    padding: 1.3rem 2rem;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    border-radius: .3rem;
+
+    &--main {
+        text-transform: uppercase;
+        background: $subColor;
+    }
+
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}

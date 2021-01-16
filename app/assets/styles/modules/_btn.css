@@ -1,13 +1,14 @@
 .btn {
     padding: 1.3rem 2rem;
-    color: #fff;
+    color: #000;
+    font-weight: bold;
     transition: all .3s ease-in-out;
     display: inline-block;
     border-radius: .3rem;
 
     &--main {
         text-transform: uppercase;
-        background: $subColor;
+        background: $mainColor;
     }
 
 }

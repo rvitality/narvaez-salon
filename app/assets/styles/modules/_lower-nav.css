@@ -1,0 +1,32 @@
+.lower-nav {
+
+    padding: 1rem 0;
+
+    &__logo-link {
+
+        img {
+            margin-right: 1rem;
+        }
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.3rem;
+
+    }
+
+    &__main-title {
+        font-size: 2rem;
+        display: inline-block;
+        font-weight: bold;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+
+    }
+
+    &__logo {
+        width: 60px;
+        border-radius: 50%;
+    }
+
+}

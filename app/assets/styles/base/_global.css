@@ -1,10 +1,12 @@
-$mainColor: rgb(240, 56, 86);
+$mainColor: #FFCA00;
+$mainOrangeRed: rgb(240, 56, 86);
 $subColor: #E22A2E;
 $subColorHovered: #da191c;
 
 body {
     font-family: 'Roboto', sans-serif;
 }
+
 
 ul {
     padding: 0;

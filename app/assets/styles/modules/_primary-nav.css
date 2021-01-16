@@ -1,3 +1,26 @@
 .primary-nav {
-    border: 1px solid red;
+
+    li {
+        margin: 0 2rem;
+    }
+
+    a {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    a:after {
+        content: '';
+        display: block;
+        transform: scaleX(0);
+        padding-bottom: .5rem;
+        transition: transform 250ms ease-in-out;
+        border-bottom: 2px solid $mainColor;
+    }
+
+
+    a:hover:after {
+        transform: scaleX(1);
+    }
+
 }

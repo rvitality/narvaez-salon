@@ -1,0 +1,39 @@
+.showcase-section {
+
+    margin-top: 3rem;
+    margin-bottom: 50rem;
+
+    &__title {
+        margin-bottom: .5rem;
+    }
+
+    &__content-container {
+        display: flex;
+    }
+
+    &__text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 2;
+    }
+
+    &__img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 5;
+    }
+
+    &__img {
+        width: 80%;
+        box-shadow: 0 0 8px .5px #000;
+        object-fit: contain;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+
+}

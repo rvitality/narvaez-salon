@@ -5,6 +5,7 @@ $subColorHovered: #da191c;
 
 body {
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 
@@ -36,4 +37,10 @@ a {
 
 .highlight {
     color: $mainColor;
+}
+
+.border-bottom {
+    width: 50px;
+    margin-bottom: .5rem;
+    border-bottom: 3px solid $mainColor;
 }

@@ -1,0 +1,51 @@
+.slider {
+
+    &__nav-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 15;
+        font-weight: bold;
+        font-size: 1.5rem;
+        height: 30px;
+        width: 30px;
+        background: rgba(255, 255, 255, .7);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
+
+    &__prev-btn {
+        left: 2%;
+    }
+
+    &__next-btn {
+        right: 2%;
+    }
+
+    &__nav-btn:hover {
+        background: #fff;
+    }
+
+    &__dots-container {
+        position: absolute;
+        bottom: 3%;
+    }
+
+    &__dot {
+        cursor: pointer;
+        margin: 0 .4rem;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        transition: all .2s ease-in-out;
+    }
+
+    &__dot:hover {
+        background: #fff;
+    }
+
+}

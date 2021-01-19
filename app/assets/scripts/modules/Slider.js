@@ -45,7 +45,6 @@ class Slider {
     }
 
     playSlide(n) {
-        console.log(counter);
         for (let i = 0; i < this.sliderImages.length; i++) {
             this.sliderImages[i].style.display = "none";
         }

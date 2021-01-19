@@ -16,6 +16,7 @@
         width: 100vw;
         height: 100vh;
         object-fit: cover;
+        box-shadow: 0 2px 18px -2px #222;
     }
 
     &__text-content {

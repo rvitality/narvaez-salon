@@ -8,7 +8,6 @@ body {
     box-sizing: border-box;
 }
 
-
 ul {
     padding: 0;
 }
@@ -43,4 +42,10 @@ a {
     width: 50px;
     margin-bottom: .5rem;
     border-bottom: 3px solid $mainColor;
+}
+
+/* active slider dot */
+.active {
+    background: #fff;
+    transform: scale(1.1);
 }

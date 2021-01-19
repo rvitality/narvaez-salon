@@ -1,6 +1,7 @@
 import "../styles/styles.css";
+import Slider from "./modules/Slider.js";
 
-console.log("hello dog...");
+new Slider();
 
 if (module.hot) {
     module.hot.accept();

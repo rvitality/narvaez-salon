@@ -11,10 +11,14 @@ class Slider {
     }
 
     events() {
-        this.timer = setInterval(this.autoSlide.bind(this), 3000);
+        this.timer = setInterval(this.autoSlide.bind(this), 5000);
         this.playSlide(counter);
         this.plusSlides(this.prevBtn, -1);
         this.plusSlides(this.nextBtn, 1);
+
+        this.dots.forEach(dot => dot.addEventListener("click", () => {
+            this.currentSlide(+dot.id);
+        }));
     }
 
     autoSlide() {
@@ -26,9 +30,9 @@ class Slider {
     plusSlides(el, num) {
         el.addEventListener("click", () => {
             counter += num;
-        })
-        this.playSlide(counter);
-        this.resetTimer();
+            this.playSlide(counter);
+            this.resetTimer();
+        });
     }
 
     // dots
@@ -41,7 +45,7 @@ class Slider {
     resetTimer() {
         clearTimeout(this.timer);
         // create new timer/interval
-        this.timer = setInterval(this.autoSlide.bind(this), 3000);
+        this.timer = setInterval(this.autoSlide.bind(this), 5000);
     }
 
     playSlide(n) {
@@ -57,7 +61,7 @@ class Slider {
             counter = 0;
         }
 
-        if (n < 1) {
+        if (n < 0) {
             counter = this.sliderImages.length - 1;
         }
 

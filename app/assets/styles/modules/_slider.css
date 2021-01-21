@@ -48,4 +48,21 @@
         background: #fff;
     }
 
+    &--zoomin {
+        animation-name: zoomin;
+        animation-duration: 2s;
+    }
+
+    @keyframes zoomin {
+        from {
+            opacity: 0.7;
+            transform: scale(1.2, 1.2);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1, 1);
+        }
+    }
+
 }

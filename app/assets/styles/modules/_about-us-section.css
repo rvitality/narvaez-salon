@@ -2,7 +2,6 @@
 
     margin-top: 3rem;
     margin-bottom: 50rem;
-    border: 2px solid red;
 
     &__title {
         margin-bottom: .5rem;
@@ -31,8 +30,8 @@
         display: none;
         width: 100%;
         border-radius: 1rem;
-        box-shadow: 0 0 5px .5px #555;
         object-fit: contain;
+
     }
 
     p {

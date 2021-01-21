@@ -17,11 +17,11 @@
     }
 
     &__prev-btn {
-        left: 2%;
+        left: 3%;
     }
 
     &__next-btn {
-        right: 2%;
+        right: 3%;
     }
 
     &__nav-btn:hover {

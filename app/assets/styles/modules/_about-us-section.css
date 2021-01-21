@@ -13,11 +13,13 @@
 
     &__text-content {
         display: flex;
+        flex: 1;
         flex-direction: column;
         justify-content: center;
     }
 
     &__slider-container {
+        flex: 1.2;
         overflow: hidden;
         position: relative;
         display: flex;
@@ -28,7 +30,6 @@
 
     &__img {
         display: none;
-        width: 100%;
         border-radius: 1rem;
         object-fit: contain;
 

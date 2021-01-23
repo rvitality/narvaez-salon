@@ -2,13 +2,10 @@
     max-width: 1236px;
     padding: 0 1.1rem;
     margin: auto;
-
     &--narrow {
         max-width: 570px;
     }
-
-    &--wide {
+    &--wide {   
         max-width: 1536px;
     }
-
 }

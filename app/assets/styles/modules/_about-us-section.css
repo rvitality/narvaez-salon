@@ -29,6 +29,7 @@
     }
 
     &__img {
+        
         display: none;
         border-radius: 1rem;
         object-fit: contain;

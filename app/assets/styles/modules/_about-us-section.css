@@ -1,8 +1,5 @@
 .about-us-section {
 
-    margin-top: 3rem;
-    margin-bottom: 50rem;
-
     &__title {
         margin-bottom: .5rem;
     }
@@ -30,9 +27,7 @@
 
     &__img {
         display: none;
-        border-radius: 1rem;
-        object-fit: contain;
-
+        object-fit: cover;
     }
 
     p {

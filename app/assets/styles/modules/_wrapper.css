@@ -3,6 +3,13 @@
     padding: 0 1.1rem;
     margin: auto;
 
+    &--display-flex-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     &--narrow {
         max-width: 570px;
     }
@@ -10,5 +17,6 @@
     &--wide {
         max-width: 1536px;
     }
+
 
 }

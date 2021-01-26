@@ -1,8 +1,3 @@
-$mainColor: #FFCA00;
-$mainOrangeRed: rgb(240, 56, 86);
-$subColor: #E22A2E;
-$subColorHovered: #da191c;
-
 body {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -39,6 +34,7 @@ a {
 }
 
 .border-bottom {
+    display: inline-block;
     width: 50px;
     margin-bottom: .5rem;
     border-bottom: 3px solid $mainColor;
@@ -48,4 +44,14 @@ a {
 .active {
     background: #fff;
     transform: scale(1.1);
+}
+
+.page-separator {
+    margin: 4rem 0;
+}
+
+
+.sub-body-color {
+    background: $subBodyColor;
+    padding: 3rem 0;
 }

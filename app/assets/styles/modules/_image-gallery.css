@@ -1,0 +1,66 @@
+.image-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    grid-template-areas:
+        "img-1 img-2 img-3 img-3"
+        "img-1 img-4 img-5 img-6"
+        "img-7 img-7 img-8 img-6";
+
+    a {
+        width: 100%;
+        height: 25rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    &__img-1 {
+        grid-area: img-1;
+        background-image: url("assets/grid-photos/woman-portrait-haircut.jpg");
+        min-height: 51.5rem;
+
+    }
+
+    &__img-2 {
+        grid-area: img-2;
+        background-image: url("assets/grid-photos/pedicure.jpg");
+    }
+
+    &__img-3 {
+        grid-area: img-3;
+        background-image: url("assets/grid-photos/man-haircut-landscape.jpg");
+    }
+
+    &__img-4 {
+        grid-area: img-4;
+        background-image: url("assets/grid-photos/nails-landscape.jpg");
+    }
+
+
+    &__img-5 {
+        grid-area: img-5;
+        background-image: url("assets/grid-photos/brushes-portrait.jpg");
+    }
+
+    &__img-6 {
+        grid-area: img-6;
+        background-image: url("assets/grid-photos/hair-washing-portrait.jpg");
+        min-height: 51.5rem;
+        background-position-x: 95% !important;
+    }
+
+    &__img-7 {
+        grid-area: img-7;
+        background-image: url("assets/grid-photos/footspa-landscape.jpg");
+    }
+
+    &__img-8 {
+        grid-area: img-8;
+        background-image: url("assets/grid-photos/nails-portrait.jpg");
+    }
+
+}

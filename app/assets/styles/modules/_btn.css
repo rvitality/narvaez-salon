@@ -1,18 +1,30 @@
 .btn {
+    cursor: pointer;
     padding: 1.3rem 2rem;
     color: #000;
     font-weight: bold;
     transition: all .3s ease-in-out;
     display: inline-block;
     border-radius: .3rem;
+    text-transform: uppercase;
+    background: $mainColor;
 
-    &--main {
-        text-transform: uppercase;
+    &--bordered {
+        border: 2px solid $mainColor;
+        background: none;
+    }
+
+    &--small {
+        padding: .9rem 1.5rem;
+        font-size: .85rem;
+    }
+
+    &--bordered:hover {
         background: $mainColor;
     }
 
-}
+    &--transform-scale-animation:hover {
+        transform: scale(1.1);
+    }
 
-.btn:hover {
-    transform: scale(1.1);
 }

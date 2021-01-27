@@ -26,7 +26,6 @@
 
 
         p {
-            font-weight: bold;
             font-size: 1.3rem;
         }
 
@@ -35,7 +34,7 @@
     &__grid-image-container {
         width: 50px;
         height: 50px;
-        border: 2px solid $mainColor;
+        background: $mainColor;
         padding: 1.3rem;
         border-radius: 50%;
 

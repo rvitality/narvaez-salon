@@ -13,19 +13,6 @@
     <!-- HEADING SECTION --------------------------------------------------------------------------------- -->
     <header class="header-section">
 
-        <div class="upper-nav">
-
-            <div class="upper-nav__text-content wrapper">
-                <ul class="header-section--display-flex">
-                    <li><i class="fas fa-phone-alt"></i>(+639) 12345678</li>
-                    <li><i class="fas fa-calendar-alt"></i>Monday - Sunday: 8:00 AM to 9:00 PM</li>
-                    <li><i class="fas fa-envelope"></i>narvaez.salon@gmail.com</li>
-                    <li><i class="fab fa-facebook-square"></i>Narvaez Salon and Spa</li>
-                </ul>
-            </div>
-
-        </div>
-
         <div class="lower-nav">
 
             <div class="lower-nav__text-content wrapper wrapper--wide header-section--display-flex">
@@ -57,15 +44,45 @@
 
     <!-- LANDING SECTION --------------------------------------------------------------------------------- -->
     <div class="landing-section" id="landing">
+        
         <img src="assets/edited-images/front.jpg" alt="" class="landing-section__image">
-
+        
         <div class="landing-section__text-content">
+
+            <div class="landing-section__mini-text">
+                <span class="landing-section__border-left"></span> 
+                <p>Stylish & Professional</p>
+            </div>
+
             <h2 class="landing-section__main-title">Your hair <span class="highlight">beauty</span>, our duty.</h2>
             <p class="landing-section__description">Established in the year 2020, the Narvaez Salon and Spa aims to
                 provide a friendly & personalized service through a team of highly skilled and creative professionals.
             </p>
             <p><a href="#" class="btn btn--transform-scale-animation">Learn more</a></p>
+        
+            <div class="landing-section__bottom-mini">
+                <div class="landing-section__bottom-mini__contacts">
+                    <div class="landing-section__mini-text">
+                        <span class="landing-section__border-left"></span> 
+                        <p>(+639) 1234 5689</p>
+                    </div>
+        
+                    <div class="landing-section__mini-text">
+                        <span class="landing-section__border-left"></span> 
+                        <p>narvaez.salonspa@gmail.com</p>
+                    </div>
+                </div>
+    
+                <div class="landing-section__bottom-mini__social-icons">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+    
+            </div>
+
         </div>
+
 
     </div>
 
@@ -82,12 +99,12 @@
                     <span class="border-bottom"></span>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure error magni fuga natus voluptates.
                         Assumenda, dolor repudiandae. </p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente, sint.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod optio rem rerum officia.
                         Dignissimos ullam soluta porro! Possimus, voluptate laboriosam.</p>
-                        
-                        <span class="about-us-section__btn btn btn--bordered btn--small">Read More</span>
-
-                    </div>
+                    <p class="about-us-section__hidden-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veniam libero atque vitae cupiditate, molestias aspernatur necessitatibus illum accusantium a quae doloribus doloremque ullam asperiores nemo, officiis omnis quidem. Sint impedit aliquam autem aliquid libero nihil earum mollitia adipisci nostrum distinctio quas quidem perferendis quam, dignissimos excepturi quis ad nobis.</p>
+                        <span id="showmore-btn" class="about-us-section__btn btn  btn--small btn--bordered">Read More</span>
+                </div>
 
                 <div class="about-us-section__slider-container">
 
@@ -111,9 +128,52 @@
 
             </div>
 
+            <div class="about-us-section__second-container">
+                <img class="about-us-section__second-container__img" src="assets/other-images/w customer - portrait-4.jpg" alt="">
+
+                <div class="about-us-section__second-container__content">
+                    <p class="about-us-section__second-container__content__sub-title">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <h1 class="about-us-section__second-container__content__title">With great services in a relaxing atmosphere.</h1>
+                    <span class="border-bottom"></span>
+
+                    <div class="about-us-section__second-container__content__list">
+                        
+                        <div class="about-us-section__second-container__content__list__item">
+                            <img src="assets/icons/grooming.png" alt="">
+                            <div>
+                                <h3>Get the style you deserve!</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur a quod quaerat vero pariatur cum.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-us-section__second-container__content__list__item">
+                            <img src="assets/icons/grooming.png" alt="">
+                            <div>
+                                <h3>Get the style you deserve!</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur a quod quaerat vero pariatur cum.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-us-section__second-container__content__list__item">
+                            <img src="assets/icons/grooming.png" alt="">
+                            <div>
+                                <h3>Get the style you deserve!</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur a quod quaerat vero pariatur cum.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+
+            </div>
+
         </div>
 
     </div>
+
+    <!-- WELCOME -->
 
     <!-- SERVICES PHOTOS --------------------------------------------------- -->
     <div class="services-section sub-body-color" id="services">
@@ -162,8 +222,10 @@
                 </div>
 
             </div>
+            
+            <button class="btn btn--small">Show Full List</button>
 
-            <div class="image-gallery">
+            <!-- <div class="image-gallery">
                 <a href="assets/grid-photos/woman-portrait-haircut.jpg" class="image-gallery__img-1"></a>
                 <a href="assets/grid-photos/pedicure.jpg" class="image-gallery__img-2"></a>
                 <a href="assets/grid-photos/man-haircut-landscape.jpg" class="image-gallery__img-3"></a>
@@ -172,7 +234,7 @@
                 <a href="assets/grid-photos/ hair-washing-portrait.jpg" class="image-gallery__img-6"></a>
                 <a href="assets/grid-photos/footspa-landscape.jpg" class="image-gallery__img-7"></a>
                 <a href="assets/grid-photos/nails-portrait.jpg" class="image-gallery__img-8"></a>
-            </div>
+            </div> -->
 
         
         </div>

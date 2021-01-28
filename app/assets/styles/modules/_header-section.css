@@ -2,8 +2,6 @@
     width: 100%;
     position: fixed;
     z-index: 5000;
-    background: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 2px 18px -2px #222;
 
     &--display-flex {
         display: flex;

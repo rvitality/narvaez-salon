@@ -10,13 +10,14 @@
     background: $mainColor;
 
     &--bordered {
-        border: 2px solid $mainColor;
+        border: 2px solid $mainColor !important;
         background: none;
     }
 
     &--small {
         padding: .9rem 1.5rem;
         font-size: .85rem;
+        border: 0;
     }
 
     &--bordered:hover {
@@ -25,6 +26,14 @@
 
     &--transform-scale-animation:hover {
         transform: scale(1.1);
+    }
+
+    &--filled-bg {
+        background: $mainColor;
+    }
+
+    &--filled-bg:hover {
+        background: none;
     }
 
 }

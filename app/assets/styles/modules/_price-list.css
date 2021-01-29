@@ -1,0 +1,39 @@
+.price-list {
+
+    border-top: 1px dashed $mainColor;
+
+    margin: 3rem 0;
+
+    &__title {
+        text-transform: lowercase;
+    }
+
+    &__description {
+        font-size: 1.2rem;
+        max-width: 650px;
+    }
+
+    &__hair-services {
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 1rem 0;
+            text-transform: uppercase;
+        }
+
+        &__price {
+            font-weight: bold;
+        }
+
+        &__center-border {
+            display: inline-block;
+            border-bottom: 2px dotted #999;
+            width: 60%;
+            margin: 0 1rem;
+        }
+
+    }
+
+}

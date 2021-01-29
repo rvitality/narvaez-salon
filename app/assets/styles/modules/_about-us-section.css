@@ -26,7 +26,6 @@
     }
 
     &__img {
-
         display: none;
         object-fit: cover;
     }
@@ -39,19 +38,6 @@
     &__btn {
         width: fit-content;
         margin-top: 2rem;
-    }
-
-    &__hidden-text {
-        overflow: hidden;
-        height: 0;
-        opacity: 0;
-        transition: height 0ms 400ms, opacity 400ms 0ms;
-    }
-
-    &--visible {
-        height: auto;
-        opacity: 1;
-        transition: height 0ms 0ms, opacity 600ms 0ms;
     }
 
     &__second-container {
@@ -67,7 +53,7 @@
         }
 
         &__content {
-            margin-left: 3rem;
+            margin-left: 5rem;
             flex: 2;
 
             &__title {
@@ -103,7 +89,7 @@
                 }
 
                 img {
-                    width: 55px;
+                    width: 40px;
                     margin-right: 2rem;
                 }
 

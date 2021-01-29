@@ -1,8 +1,9 @@
 class Showmore {
-    constructor() {
+    constructor(buttonID, element, textMessage) {
+        this.textMessage = textMessage;
         this.hidden = true;
-        this.btn = document.getElementById("showmore-btn");
-        this.text = document.querySelector(".about-us-section__hidden-text");
+        this.btn = document.querySelector(buttonID);
+        this.text = document.querySelector(element);
         this.events();
     }
 
@@ -11,13 +12,13 @@ class Showmore {
 
             if (this.hidden) {
                 this.hidden = false;
-                this.btn.textContent = "Read Less";
-                this.text.classList.add("about-us-section--visible");
+                this.btn.innerHTML = "Hide <i class='fas fa-angle-up'></i>";
+                this.text.classList.add("visible");
                 this.btn.classList.add("btn--filled-bg");
             } else {
                 this.hidden = true;
-                this.btn.textContent = "Read More";
-                this.text.classList.remove("about-us-section--visible");
+                this.btn.innerHTML = this.textMessage;
+                this.text.classList.remove("visible");
                 this.btn.classList.remove("btn--filled-bg");
             }
 

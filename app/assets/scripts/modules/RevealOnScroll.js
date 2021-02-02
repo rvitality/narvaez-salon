@@ -27,7 +27,6 @@ class RevealOnScroll {
 
     calculateIfScrolledTo(el) {
         if (window.scrollY + this.browserHeight > el.offsetTop) {
-            console.log("cacl...");
             let scrollPercent = (el.getBoundingClientRect().top / this.browserHeight) * 100;
             if (scrollPercent < 75) {
                 el.classList.add("reveal-item--is-visible");

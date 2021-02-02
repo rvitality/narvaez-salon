@@ -27,12 +27,12 @@
 
                 <div class="primary-nav">
                     <ul>
-                        <li><a href="" id="home-link" class="current-link">Home</a></li>
-                        <li><a href="#services" id="services-link">Services</a></li>
-                        <li><a href="" id="gallery-link">Gallery</a></li>
-                        <li><a href="" id="shop-link">Shop</a></li>
+                        <li><a href="#landing" id="landing-link">Home</a></li>
                         <li><a href="#about-us" id="about-us-link">About</a></li>
-                        <li><a href="" id="contact-link">Contact</a></li>
+                        <li><a href="#services" id="services-link">Services</a></li>
+                        <li><a href="#gallery" id="gallery-link">Gallery</a></li>
+                        <li><a href="#shop" id="shop-link">Shop</a></li>
+                        <li><a href="#contact" id="contact-link">Contact</a></li>
                     </ul>
                 </div>
 
@@ -43,7 +43,7 @@
     </header>
 
     <!-- LANDING SECTION --------------------------------------------------------------------------------- -->
-    <div class="landing-section" id="landing">
+    <div class="landing-section page-section" id="landing" data-matching-link="#landing-link">
         
         <img src="assets/edited-images/front.jpg" alt="" class="landing-section__image">
         
@@ -88,7 +88,7 @@
 
 
     <!-- ABOUT US --------------------------------------------------- -->
-    <div class="about-us-section page-separator reveal-item" id="about-us">
+    <div class="about-us-section page-separator reveal-item page-section" id="about-us" data-matching-link="#about-us-link">
 
         <div class="wrapper">
 
@@ -174,7 +174,7 @@
     </div>
 
     <!-- SERVICES PHOTOS --------------------------------------------------- -->
-    <div class="services-section sub-body-color reveal-item" id="services">
+    <div class="services-section sub-body-color reveal-item page-section" id="services" data-matching-link="#services-link">
         <div class="wrapper wrapper--display-flex-col">
             <div class="generic-content__icon"><i class="fas fa-cog"></i></div>
             <h1 class="services-section__title">Services</h1>
@@ -389,7 +389,7 @@
 
             </div>
 
-            <span class="btn btn--small btn--bordered  down-arrow" id="show-price-list-btn">Price List <i class="fas fa-angle-down"></i></span>
+            <span class="btn btn--small btn--bordered btn--margin-bottom down-arrow" id="show-price-list-btn">Price List <i class="fas fa-angle-down"></i></span>
 
             <!-- <div class="image-gallery">
                 <a href="assets/grid-photos/woman-portrait-haircut.jpg" class="image-gallery__img-1"></a>
@@ -404,8 +404,6 @@
         
         </div>
     </div>
-
-    
 
     <script src="bundled.js"></script>
 

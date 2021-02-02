@@ -26,9 +26,12 @@
         border-bottom: 2px solid $mainColor;
     }
 
-
     a:hover:after {
         transform: scaleX(1);
+    }
+
+    &--is-current-link{
+        color: $mainColor;
     }
 
 }

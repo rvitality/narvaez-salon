@@ -1,6 +1,8 @@
 .price-list {
-    border-top: 1px dashed $mainColor;
-    margin: 3rem 0;
+    border-top: 5px solid #000;
+    border-bottom: 3px solid #333;
+    background: rgb(230, 230, 230);
+    padding: 2rem 3rem;
 
     &__title {
         text-transform: lowercase;
@@ -10,14 +12,10 @@
         font-size: 1.2rem;
     }
 
-    &__services-container {}
-
     &__item-title {
         margin-top: 3rem;
         padding: 0 1rem;
         display: inline-block;
-        border-left: 2px dashed $mainColor;
-        border-right: 2px dashed $mainColor;
     }
 
     &__item-description {

@@ -36,4 +36,8 @@
         background: none;
     }
 
+    &--margin-top {
+        margin-top: 2rem;
+    }
+
 }

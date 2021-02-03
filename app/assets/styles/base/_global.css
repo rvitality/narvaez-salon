@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -58,4 +58,9 @@ a {
 .sub-body-color {
     background: $subBodyColor;
     padding: 3rem 0;
+}
+
+.bold {
+    font-weight: bold;
+    color: $mainColor;
 }

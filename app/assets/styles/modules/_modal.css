@@ -1,4 +1,5 @@
 .modal {
+    color: #fff;
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -9,15 +10,36 @@
     right: 0;
     bottom: 0;
     z-index: 9999;
-    background-color: rgba(255, 255, 255, .94);
+    background-color: rgba(0, 0, 0, .93);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 
+    &__main-title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    &__envelope {
+        display: inline-block;
+        color: $mainColor;
+        border-radius: 50%;
+        font-size: 4rem;
+        margin-bottom: .8rem;
+    }
+
+    &__description {
+        font-size: 1.3rem;
+        max-width: 650px;
+        line-height: 1.35;
+    }
+
     &__close-btn {
         cursor: pointer;
-        color: #333;
+        color: #ddd;
         position: absolute;
         font-size: 1.5rem;
         transform: scaleX(1.2);
@@ -25,6 +47,37 @@
         right: 25px;
         font-weight: bold;
         transition: color .3s ease;
+    }
+
+    &__social-icons {
+        display: inline-block;
+        margin-top: 2rem;
+
+        a {
+            position: relative;
+            display: inline-block;
+            height: 75px;
+            width: 75px;
+            margin: 0 1rem;
+            background: #333;
+            font-size: 2rem;
+            transition: all .3s ease-in-out;
+            border-radius: 5px;
+
+            i {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+        }
+
+        a:hover {
+            color: #333;
+            background: #fff;
+        }
+
     }
 
     &__close-btn:hover {
@@ -36,5 +89,6 @@
         opacity: 1;
         visibility: visible;
     }
+
 
 }

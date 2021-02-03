@@ -3,6 +3,11 @@
     position: fixed;
     z-index: 5000;
     transition: all .6s ease;
+    display: none;
+
+    @mixin atMedium{
+        display: block;
+    }
 
     &--dark {
         background: rgba(0, 0, 0, 0.7);

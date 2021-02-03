@@ -44,7 +44,11 @@
         max-width: 90%;
         margin: auto;
         margin-top: 7rem;
-        display: flex;
+
+        @mixin atMedium {
+            display: flex;
+        }
+
 
         &__img {
             width: 350px;
@@ -53,8 +57,13 @@
         }
 
         &__content {
-            margin-left: 5rem;
-            flex: 2;
+
+            margin-top: 3rem;
+
+            @mixin atMedium {
+                margin-left: 5rem;
+                flex: 2;
+            }
 
             &__title {
                 margin-bottom: .5rem;

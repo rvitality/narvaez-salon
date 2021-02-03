@@ -13,8 +13,7 @@ class StickyHeader {
     events() {
         window.addEventListener("scroll", throttle(() => this.runOnScroll(), 200));
         window.addEventListener("resize", debounce(() =>
-            this.browserHeight = window.innerHeight
-            , 333));
+            this.browserHeight = window.innerHeight, 333));
     }
 
     runOnScroll() {
@@ -33,21 +32,17 @@ class StickyHeader {
     determineScrollDirection() {
         if (window.scrollY > this.previousScrollY) {
             this.scrollDirection = "down";
-        }
-        else {
+        } else {
             this.scrollDirection = "up";
         }
 
         this.previousScrollY = window.scrollY;
-
-        console.log(this.scrollDirection);
-
     }
 
     calcSection(el) {
         if ((window.scrollY + this.browserHeight > el.offsetTop) && (window.scrollY < el.offsetTop + el.offsetHeight)) {
             let scrollPercent = (el.getBoundingClientRect().top / this.browserHeight) * 100;
-            if ((scrollPercent < 25 && scrollPercent >= 0 && this.scrollDirection === "down") || (scrollPercent < 33 && this.scrollDirection === "up")) {
+            if ((scrollPercent < 25 && scrollPercent > -0.1 && this.scrollDirection === "down") || (scrollPercent < 33 && this.scrollDirection === "up")) {
                 let matchingLink = el.getAttribute("data-matching-link");
                 document.querySelectorAll(`.primary-nav a:not(${matchingLink})`).forEach(el => el.classList.remove("primary-nav--is-current-link"));
                 document.querySelector(matchingLink).classList.add("primary-nav--is-current-link");

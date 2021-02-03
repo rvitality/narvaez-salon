@@ -1,0 +1,40 @@
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    transform: scale(1.2);
+    transition: all .3s ease-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, .94);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &__close-btn {
+        cursor: pointer;
+        color: #333;
+        position: absolute;
+        font-size: 1.5rem;
+        transform: scaleX(1.2);
+        top: 25px;
+        right: 25px;
+        font-weight: bold;
+        transition: color .3s ease;
+    }
+
+    &__close-btn:hover {
+        color: red;
+    }
+
+    &--is-visible {
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+
+}

@@ -81,7 +81,7 @@
     }
 
     &__close-btn:hover {
-        color: red;
+        color: rgb(204, 25, 25);
     }
 
     &--is-visible {

@@ -20,22 +20,19 @@
     }
 
     &__text-content {
-        z-index: 1;
-        text-align: center;
         color: #fff;
         position: absolute;
-        display: flex;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        /* these height and weight percentage values' causing the horizontal bar or the extra padding on the right in the landing section*/
-        height: 100%;
         width: 100%;
-        margin: auto;
-        top: 0;
+        text-align: center;
     }
 
     &__main-title {
+        text-align: center;
         text-transform: uppercase;
         letter-spacing: .3rem;
         margin-bottom: 0;
@@ -48,41 +45,49 @@
         @mixin atMedium {
             font-size: 3.2rem;
         }
-        
+
         @mixin atLarge {
-            font-size: 3.8rem;
+            font-size: 4.2rem;
         }
 
     }
 
     &__description {
-        margin: 2rem 0;
         text-align: center;
         text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
         line-height: 1.25;
-        max-width: 300px;
         font-size: .9rem;
+
+        margin: 2rem auto 3rem auto;
 
         @mixin atSmall {
             font-size: 1.4rem;
         }
 
         @mixin atLarge {
-            max-width: 700px;
-
+            max-width: 900px;
         }
 
     }
 
     &__mini-text {
-        position: relative;
+
         text-align: left;
         text-transform: lowercase;
         font-size: 1.3rem;
         display: flex;
         align-items: center;
         justify-content: center;
-        display: none;
+
+        /* stylish & professional*/
+        &__top {
+            position: absolute;
+            width: fit-content;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -20%;
+        }
+
     }
 
     &__border-left {
@@ -94,14 +99,16 @@
     }
 
     &__bottom-mini {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -60%;
         width: 50vw;
         max-width: 50vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: absolute;
-        bottom: 10%;
-        display: none;
+
 
         &__contacts {
             display: flex;

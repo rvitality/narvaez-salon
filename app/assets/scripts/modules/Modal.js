@@ -14,7 +14,7 @@ class Modal {
         });
 
         // open modal
-        this.openModalButtons.forEach(el => el.addEventListener("click", () => this.openModal()));
+        this.openModalButtons.forEach(el => el.addEventListener("click", e => this.openModal(e)));
 
         // esc key, close modal
         document.addEventListener("keyup", e => {
@@ -24,7 +24,8 @@ class Modal {
         });
     }
 
-    openModal() {
+    openModal(e) {
+        e.preventDefault();
         this.modal.classList.add("modal--is-visible");
     }
 

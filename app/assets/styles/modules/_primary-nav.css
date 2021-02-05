@@ -1,6 +1,11 @@
 .primary-nav {
-    
-    ul{
+    display: none;
+
+    @mixin atLarge {
+        display: block;
+    }
+
+    ul {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -9,11 +14,11 @@
     li {
         margin: 0 2rem;
     }
-    
+
     a {
         font-weight: 600;
         text-transform: uppercase;
-        display: inline-block; 
+        display: inline-block;
         margin-top: .5rem;
     }
 
@@ -30,7 +35,7 @@
         transform: scaleX(1);
     }
 
-    &--is-current-link{
+    &--is-current-link {
         color: $mainColor;
     }
 

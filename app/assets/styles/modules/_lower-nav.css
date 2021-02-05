@@ -1,32 +1,64 @@
 .lower-nav {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: .7rem 0;
+    max-width: 80vw;
+
+    @mixin atSmall {
+        max-width: 100vw;
+    }
+
+    @mixin atRegular {
+        display: block;
+    }
+
+    @mixin atMedium {
+        display: block;
+    }
 
     &__logo-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
             margin-right: 1rem;
         }
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
     }
 
     &__main-title {
-        font-size: 1.6rem;
-        display: inline-block;
         font-weight: bold;
         letter-spacing: .3rem;
         text-transform: uppercase;
+        font-size: 1.3rem;
+
+        @mixin atRegular {
+            font-size: 1.5rem;
+            display: inline-block;
+        }
+
+        @mixin atMedium {
+            font-size: 1.6rem;
+        }
 
     }
 
     &__logo {
-        width: 50px;
-        border-radius: 50%;
+        width: 60px;
         object-fit: contain;
+
+        @mixin atSmall {
+            width: 50px;
+        }
+
+        @mixin atRegular {
+            width: 50px;
+            border-radius: 50%;
+        }
+
     }
 
 }

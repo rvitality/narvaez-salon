@@ -1,0 +1,14 @@
+.menu-icon {
+    z-index: 999999;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    @mixin atLarge {
+        display: none;
+    }
+
+}

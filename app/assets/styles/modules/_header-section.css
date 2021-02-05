@@ -3,21 +3,6 @@
     position: fixed;
     z-index: 5000;
     transition: all .6s ease;
-    display: none;
-
-    @mixin atMedium {
-        display: block;
-    }
-
-    &__menu-icon {
-        width: 25px;
-        height: 25px;
-        background: #fff;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-    }
-
 
     &--dark {
         background: rgba(0, 0, 0, 0.7);

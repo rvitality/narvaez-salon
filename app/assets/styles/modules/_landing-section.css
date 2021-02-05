@@ -23,15 +23,21 @@
         color: #fff;
         position: absolute;
         left: 50%;
-        top: 50%;
+        top: 45%;
         transform: translate(-50%, -50%);
         z-index: 5;
         flex-direction: column;
         width: 100%;
         text-align: center;
+
+        @mixin atSmall {
+            top: 50%;
+        }
+
     }
 
     &__main-title {
+        line-height: 1.35;
         text-align: center;
         text-transform: uppercase;
         letter-spacing: .3rem;
@@ -57,11 +63,21 @@
         text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
         line-height: 1.25;
         font-size: .9rem;
-
-        margin: 2rem auto 3rem auto;
+        margin: 1.5rem auto 3rem auto;
 
         @mixin atSmall {
+            font-size: 1.1rem;
+            max-width: 400px;
+        }
+
+        @mixin atRegular {
             font-size: 1.4rem;
+            max-width: 600px;
+        }
+
+        @mixin atMedium {
+            font-size: 1.4rem;
+            max-width: 700px;
         }
 
         @mixin atLarge {
@@ -71,13 +87,16 @@
     }
 
     &__mini-text {
-
         text-align: left;
         text-transform: lowercase;
-        font-size: 1.3rem;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @mixin atSmall {
+            font-size: 1.3rem;
+        }
+
 
         /* stylish & professional*/
         &__top {
@@ -85,46 +104,91 @@
             width: fit-content;
             left: 50%;
             transform: translateX(-50%);
+            top: -10%;
+        }
+
+        @mixin atSmall {
+            top: -15%;
+        }
+
+        @mixin atRegular {
+            top: -10%;
+        }
+
+        @mixin atMediumLarge {
             top: -20%;
         }
+
 
     }
 
     &__border-left {
         margin-right: 1rem;
         display: inline-block;
-        width: 35px;
+        min-width: 35px;
         height: 4px;
         background: $mainColor;
     }
 
     &__bottom-mini {
+        width: fit-content;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -60%;
-        width: 50vw;
-        max-width: 50vw;
+        margin-top: 8rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        flex-direction: column;
 
+        @mixin atSmall {
+            margin-top: 5rem;
+        }
+
+        @mixin atRegular {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         &__contacts {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+            @mixin atRegular {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
             div {
-                margin-right: 3rem;
-                font-size: 1.1rem;
+                display: flex;
+                justify-content: flex-start;
+                font-size: .9rem;
+
+                p {
+                    margin: .3rem;
+                }
+
+                @mixin atRegular {
+                    margin-right: 2rem;
+                }
+
+                @mixin atRegular {
+                    margin-right: 3rem;
+                    font-size: 1.1rem;
+                }
+
             }
 
         }
 
         &__social-icons {
+
+            margin-top: 1.5rem;
+
+            @mixin atRegular {
+                margin-top: 0;
+            }
+
             i {
-                margin-left: 1rem;
+                margin: 0 .5rem;
             }
 
             a:hover {

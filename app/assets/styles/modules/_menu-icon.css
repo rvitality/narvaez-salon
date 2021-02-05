@@ -1,4 +1,6 @@
 .menu-icon {
+    cursor: pointer;
+    transition: all .3s ease-in-out;
     z-index: 999999;
     width: 25px;
     height: 25px;
@@ -10,5 +12,6 @@
     @mixin atLarge {
         display: none;
     }
+
 
 }

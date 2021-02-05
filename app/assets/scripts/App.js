@@ -1,10 +1,12 @@
 import "../styles/styles.css";
+import MobileMenu from "./modules/MobileMenu";
 import Showmore from "./modules/Showmore";
 import Slider from "./modules/Slider.js";
 import StickyHeader from "./modules/StickyHeader";
 import RevealOnScroll from "./modules/RevealOnScroll";
 import Modal from "./modules/Modal";
 
+new MobileMenu();
 new StickyHeader();
 new RevealOnScroll();
 new Modal();

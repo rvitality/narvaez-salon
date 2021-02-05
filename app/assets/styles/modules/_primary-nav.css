@@ -1,14 +1,19 @@
 .primary-nav {
-    display: none;
 
     @mixin atLarge {
         display: block;
     }
 
-    ul {
+    &__nav-links {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &--is-visible {
+            display: inline-block;
+            border: 1px solid green;
+        }
+
     }
 
     li {
@@ -38,5 +43,7 @@
     &--is-current-link {
         color: $mainColor;
     }
+
+
 
 }

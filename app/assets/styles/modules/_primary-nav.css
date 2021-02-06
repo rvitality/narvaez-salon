@@ -5,6 +5,10 @@
         display: inline-block;
     }
 
+    &--is-current-link {
+        color: $mainColor;
+    }
+
     &__nav-links {
         opacity: 0;
         height: 0;
@@ -58,11 +62,5 @@
     a:hover:after {
         transform: scaleX(1);
     }
-
-    &--is-current-link {
-        color: $mainColor;
-    }
-
-
 
 }

@@ -1,11 +1,11 @@
 .menu-icon {
+    position: absolute;
+    right: 20px;
+    top: 25px;
     cursor: pointer;
     z-index: 999999;
     width: 20px;
     height: 19px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
     transition: all .3s ease-in-out;
     transition: transform .3s ease-out;
 

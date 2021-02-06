@@ -1,10 +1,13 @@
 .lower-nav {
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: .7rem 0;
     transition: all .3s ease-out;
+
+    @mixin atSmallest {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     &--is-flex-col {
         flex-direction: column;
@@ -15,23 +18,35 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 70vw;
 
         @mixin atLarge {
             max-width: 100vw;
         }
 
-        img {
-            margin-right: 1rem;
+        &--display-flex-col {
+            flex-direction: column;
         }
-
     }
 
     &__main-title {
         font-weight: bold;
         letter-spacing: .1rem;
         text-transform: uppercase;
+        font-size: .9rem;
+        text-align: start;
+        line-height: 1.35;
+
+        &--text-center {
+            text-align: center;
+        }
+
+        @mixin atSmallest {
+            letter-spacing: .3rem;
+        }
 
         @mixin atSmall {
+            font-size: 1.1rem;
             letter-spacing: .3rem;
         }
 
@@ -49,12 +64,18 @@
     &__logo {
         width: 55px;
         object-fit: contain;
+        margin-right: 1rem;
 
-        @mixin atSmall {
-            width: 50px;
+        &--margin-bottom {
+            margin-bottom: 1rem;
         }
 
-        @mixin atRegular {
+        @mixin atMedium {
+            width: 70px;
+            border-radius: 50%;
+        }
+
+        @mixin atLarge {
             width: 50px;
             border-radius: 50%;
         }

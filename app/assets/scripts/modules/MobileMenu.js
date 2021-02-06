@@ -4,6 +4,9 @@ class MobileMenu {
         this.lowerNav = document.querySelector(".lower-nav");
         this.navbarList = document.querySelector(".primary-nav__nav-links");
         this.headerSection = document.querySelector(".header-section");
+        this.logoTextElement = document.querySelector(".lower-nav__main-title");
+        this.logoImage = document.querySelector(".lower-nav__logo");
+        this.logoContainer = document.querySelector(".lower-nav__logo-link");
         this.events();
     }
 
@@ -16,6 +19,9 @@ class MobileMenu {
         this.lowerNav.classList.toggle("lower-nav--is-flex-col");
         this.headerSection.classList.toggle("header-section--is-expanded");
         this.menuIconBtn.classList.toggle("menu-icon__close-btn");
+        this.logoTextElement.classList.toggle("lower-nav__main-title--text-center");
+        this.logoImage.classList.toggle("lower-nav__logo--margin-bottom");
+        this.logoContainer.classList.toggle("lower-nav__logo-link--display-flex-col");
     }
 
 

@@ -1,18 +1,18 @@
 .header-section {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     z-index: 5000;
-    transition: all .6s ease;
+    transition: all .4s ease;
 
     &--dark {
         background: rgba(0, 0, 0, 0.7);
         box-shadow: 0 4px 12px -2px #000;
     }
 
-    &--display-flex {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    &--is-expanded {
+        background: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 4px 12px -2px #000;
     }
+
 
 }

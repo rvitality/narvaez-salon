@@ -1,18 +1,27 @@
 .about-us-section {
 
+    border: 1px solid red;
+
     &__title {
         margin-bottom: .5rem;
     }
 
     &__content-container {
-        display: flex;
+        border: 1px solid green !important;
+        
+        @mixin atRegular {
+            display: flex;
+        }
+
     }
 
     &__text-content {
         display: flex;
         flex: 1;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
+
     }
 
     &__slider-container {
@@ -22,17 +31,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-left: 3rem;
+        margin-top: 3rem;
+        
+
+        @mixin atRegular {
+            margin-top: 0;
+            margin-left: 3rem;
+        }
+        
     }
 
     &__img {
         display: none;
-        object-fit: cover;
-    }
-
-    p {
-        margin-bottom: 0;
-        font-size: 1.1rem;
+        object-fit: cover !important;
     }
 
     &__btn {

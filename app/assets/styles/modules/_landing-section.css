@@ -135,7 +135,8 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        margin-top: 8rem;
+        /* margin-top: 8rem; */
+        margin-top: 1rem;
         display: flex;
         align-items: center;
         flex-direction: column;

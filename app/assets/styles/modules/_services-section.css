@@ -6,11 +6,6 @@
         text-transform: lowercase;
     }
 
-    &__description {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
     &__grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);

@@ -2,7 +2,7 @@
     width: 100vw;
     position: fixed;
     z-index: 5000;
-    transition: all .4s ease;
+    transition: all .4s ease-in-out;
 
     &--dark {
         background: rgba(0, 0, 0, 0.7);

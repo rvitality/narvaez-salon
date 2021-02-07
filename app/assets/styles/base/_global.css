@@ -2,7 +2,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -40,8 +39,9 @@ a {
 
 .border-bottom {
     display: inline-block;
+    margin: auto auto .5rem auto;
     width: 50px;
-    margin-bottom: .5rem;
+
     border-bottom: 3px solid $mainColor;
 }
 
@@ -54,7 +54,6 @@ a {
 .page-separator {
     margin: 4rem 0;
 }
-
 
 .sub-body-color {
     background: $subBodyColor;

@@ -9,10 +9,6 @@
         text-transform: lowercase;
     }
 
-    &__description {
-        font-size: 1.2rem;
-    }
-
     &__item-title {
         margin-top: 3rem;
         padding: 0 1rem;

@@ -19,8 +19,13 @@
         align-items: center;
         justify-content: center;
         max-width: 70vw;
+        transition: all .3s ease-in-out;
 
         @mixin atLarge {
+            max-width: 100vw;
+        }
+
+        &--remove-max-width{
             max-width: 100vw;
         }
 

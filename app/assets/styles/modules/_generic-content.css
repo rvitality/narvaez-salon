@@ -2,6 +2,16 @@
 
     text-align: center;
 
+    &__main-title{
+        font-size: 1.6rem;
+    }
+
+    &__paragraph{
+        font-size: 1.1rem;
+        text-align: justify;
+        text-indent: 1rem;
+    }
+
     &__icon {
         color: #777;
         display: flex;

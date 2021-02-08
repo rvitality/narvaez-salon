@@ -22,10 +22,11 @@
         transition: all .3s ease-in-out;
 
         @mixin atLarge {
+            flex: 1;
             max-width: 100vw;
         }
 
-        &--remove-max-width{
+        &--remove-max-width {
             max-width: 100vw;
         }
 
@@ -51,18 +52,19 @@
         }
 
         @mixin atSmall {
+            line-height: 1;
             font-size: 1.1rem;
             letter-spacing: .3rem;
         }
 
         @mixin atRegular {
-            font-size: 1.5rem;
-            display: inline-block;
+            font-size: 1.4rem;
         }
 
-        @mixin atMedium {
+        @mixin atMediumLarge {
             font-size: 1.6rem;
         }
+
 
     }
 
@@ -76,7 +78,7 @@
         }
 
         @mixin atMedium {
-            width: 70px;
+            width: 65px;
             border-radius: 50%;
         }
 

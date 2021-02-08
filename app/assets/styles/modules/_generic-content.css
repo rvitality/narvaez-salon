@@ -2,14 +2,20 @@
 
     text-align: center;
 
-    &__main-title{
+    &__main-title {
         font-size: 1.6rem;
+
+        @mixin atLarge {
+            font-size: 2rem;
+        }
+
     }
 
-    &__paragraph{
+    &__paragraph {
         font-size: 1.1rem;
         text-align: justify;
         text-indent: 1rem;
+        margin: .5rem;
     }
 
     &__icon {

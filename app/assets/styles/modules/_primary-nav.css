@@ -1,10 +1,13 @@
 .primary-nav {
+    flex: 2;
     opacity: 0;
     height: 0;
     overflow: hidden;
     transition: all .3s ease-out;
     transform: scale(1.2);
     font-size: .9rem;
+    display: flex;
+    justify-content: center;
 
     @mixin atSmall {
         font-size: 1rem;
@@ -13,13 +16,8 @@
     @mixin atLarge {
         opacity: 1;
         height: fit-content;
-        display: flex;
+        width: 100%;
         transform: scale(1);
-    }
-
-    @mixin atLarge {
-        display: inline-block;
-        height: fit-content;
     }
 
     &--is-visible {
@@ -27,14 +25,29 @@
         transform: scale(1);
         opacity: 1;
         display: flex;
-        flex-direction: column;
         text-align: center;
     }
 
     &--is-current-link {
-        color: $mainColor;
+        color: $mainColor !important;
     }
 
+    &__nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        @mixin atMedium {
+            flex-direction: row;
+            margin-top: 1.5rem;
+        }
+
+        @mixin atLarge {
+            margin-top: 1rem;
+        }
+
+    }
 
     li {
         margin: 0 2rem;

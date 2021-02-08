@@ -7,6 +7,7 @@ class MobileMenu {
         this.logoTextElement = document.querySelector(".lower-nav__main-title");
         this.logoImage = document.querySelector(".lower-nav__logo");
         this.logoContainer = document.querySelector(".lower-nav__logo-link");
+        this.borderBottom = document.querySelector(".lower-nav .border-bottom");
         this.events();
     }
 
@@ -25,6 +26,8 @@ class MobileMenu {
 
         this.logoContainer.classList.toggle("lower-nav__logo-link--display-flex-col");
         this.logoContainer.classList.toggle("lower-nav__logo-link--remove-max-width");
+
+        this.borderBottom.classList.toggle("border-bottom--show");
     }
 
 

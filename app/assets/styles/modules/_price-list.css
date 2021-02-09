@@ -9,10 +9,26 @@
         text-transform: lowercase;
     }
 
+    li {
+        font-size: .9rem;
+
+        @mixin atSmall {
+            font-size: 1rem;
+        }
+
+    }
+
+
     &__item-title {
         margin-top: 3rem;
         padding: 0 1rem;
         display: inline-block;
+        font-size: 1.35rem;
+
+        @mixin atMedium {
+            font-size: 1.6rem;
+        }
+
     }
 
     &__item-description {
@@ -40,10 +56,19 @@
         }
 
         &__center-border {
-            flex: 2;
+            flex: .2;
             display: inline-block;
             border-bottom: 2px dotted #999;
             margin: 0 1rem;
+
+            @mixin atSmall {
+                flex: .8;
+            }
+
+            @mixin atRegular {
+                flex: 1;
+            }
+
         }
 
     }

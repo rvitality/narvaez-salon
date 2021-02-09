@@ -39,9 +39,17 @@ a {
 
 .border-bottom {
     display: inline-block;
-    margin: .5rem auto;
+    margin: .5rem;
     width: 50px;
     border-bottom: 3px solid $mainColor;
+
+    @mixin atLarge {
+        margin-bottom: 1.5rem;
+
+        &--no-left-margin {
+            margin-left: 0;
+        }
+    }
 
     &--hide {
         display: none;
@@ -58,6 +66,7 @@ a {
     &--wide {
         width: 100px;
     }
+
 
 }
 

@@ -19,10 +19,6 @@
         padding: 1.3rem 2rem;
     }
 
-    &--margin-bottom {
-        margin-bottom: 50rem;
-    }
-
     &--bordered {
         border: 2px solid $mainColor !important;
         background: none;

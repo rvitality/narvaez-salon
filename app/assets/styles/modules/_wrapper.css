@@ -14,6 +14,10 @@
         max-width: 570px;
     }
 
+    &--regular {
+        max-width: 1236px;
+    }
+
     &--wide {
         max-width: 1536px;
     }

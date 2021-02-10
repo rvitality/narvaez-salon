@@ -1,4 +1,81 @@
 .gallery-section {
-    color: #000 !important;
-    border: 1px solid red;
+    position: relative;
+    text-align: center;
+
+    &__images-container {
+        margin-top: 2rem;
+        display: grid;
+        grid-gap: 2rem;
+
+        @mixin atMedium {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @mixin atMediumLarge {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    }
+
+    &__photo-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        img {
+            object-fit: contain;
+            height: 200px;
+            border: 3px solid #000;
+            box-shadow: 0 0 5px #000;
+
+            @mixin atSmall {
+                height: 280px;
+            }
+
+            @mixin atMedium {
+                height: 230px;
+            }
+
+            @mixin atLarge {
+                height: 300px;
+            }
+
+        }
+
+        div:first-child img {
+            border-right: 0;
+        }
+
+        div {
+            position: relative;
+
+            span {
+                position: absolute;
+                color: #000;
+                bottom: 5%;
+                padding: .4rem .7rem;
+                border-radius: .3rem;
+                font-size: .9rem;
+                font-weight: bold;
+                letter-spacing: .1rem;
+                background: rgba(255, 255, 255, .85);
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 1;
+                font-size: .75rem;
+
+                @mixin atSmall {
+                    font-size: .85rem;
+                }
+
+                @mixin atLarge {
+                    font-size: .95rem;
+                }
+
+            }
+        }
+
+
+    }
+
 }

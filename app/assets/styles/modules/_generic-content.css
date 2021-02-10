@@ -1,9 +1,13 @@
 .generic-content {
-
     text-align: center;
+
+    &--padding-top-bot {
+        padding: 3rem 0;
+    }
 
     &__main-title {
         font-size: 1.7rem;
+        text-transform: lowercase;
 
         @mixin atLarge {
             font-size: 2rem;
@@ -26,12 +30,13 @@
             text-align: justify;
             text-indent: 0;
             margin-left: 0;
+
         }
 
     }
 
     &__icon {
-        color: #777;
+        color: #333;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -39,7 +44,7 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 2px solid #777;
+        border: 2px solid #555;
     }
 
 }

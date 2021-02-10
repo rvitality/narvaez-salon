@@ -1,5 +1,5 @@
 .primary-nav {
-    flex: 2;
+    flex: 1;
     opacity: 0;
     height: 0;
     overflow: hidden;
@@ -16,6 +16,7 @@
     @mixin atLarge {
         opacity: 1;
         height: fit-content;
+        justify-content: flex-end;
         width: 100%;
         transform: scale(1);
     }

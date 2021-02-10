@@ -1,15 +1,23 @@
 .services-section {
-    text-align: center;
-
-    &__title {
-        text-transform: lowercase;
-    }
 
     &__grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 2rem;
         margin-top: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        @mixin atSmall {
+            grid-gap: .5rem;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @mixin atMedium {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @mixin atLarge {
+            grid-gap: 1rem;
+        }
+
     }
 
     &__grid-item {
@@ -17,11 +25,19 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        display: none;
+        margin-bottom: 1rem;
 
         p {
-            font-size: 1.3rem;
             margin-bottom: 0;
+
+            @mixin atMedium {
+                font-size: 1.3rem;
+            }
+
+            @mixin atLarge {
+                font-size: 1.3rem;
+            }
+
         }
 
     }
@@ -30,8 +46,32 @@
         width: 50px;
         height: 50px;
         background: $mainColor;
-        padding: 1.3rem;
         border-radius: 50%;
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @mixin atSmallest {
+            padding: 1rem;
+        }
+
+        @mixin atLarge {
+            padding: 1.3rem;
+        }
+
+        img {
+            width: 35px;
+
+            @mixin atSmallest {
+                width: 40px;
+            }
+
+            @mixin atLarge {
+                width: 50px;
+            }
+
+        }
 
     }
 

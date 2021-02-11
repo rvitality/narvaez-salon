@@ -8,6 +8,7 @@
     &__main-title {
         font-size: 1.7rem;
         text-transform: lowercase;
+        text-align: center;
 
         @mixin atLarge {
             font-size: 2rem;

@@ -24,12 +24,18 @@
 
         img {
             object-fit: contain;
-            height: 200px;
-            border: 3px solid #000;
+            height: 150px;
+            border: 3px double #555;
             box-shadow: 0 0 5px #000;
 
+            /* 400px */
+            @mixin atSemiSmall {
+                height: 200px;
+            }
+
             @mixin atSmall {
-                height: 280px;
+                border: 4px double #555;
+                height: 300px;
             }
 
             @mixin atMedium {
@@ -52,7 +58,6 @@
             span {
                 position: absolute;
                 color: #000;
-                bottom: 5%;
                 padding: .4rem .7rem;
                 border-radius: .3rem;
                 font-size: .9rem;
@@ -62,10 +67,12 @@
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 1;
-                font-size: .75rem;
+                font-size: .55rem;
+                bottom: 7%;
 
                 @mixin atSmall {
                     font-size: .85rem;
+                    bottom: 5%;
                 }
 
                 @mixin atLarge {

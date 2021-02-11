@@ -2,11 +2,22 @@
     border-top: 5px solid #000;
     border-bottom: 3px solid #333;
     background: rgb(230, 230, 230);
-    padding: 2rem 3rem;
     margin: 3rem 0;
+    padding: 1rem 1.5rem;
+    border: 1px solid red;
 
-    &__title {
-        text-transform: lowercase;
+    @mixin atMedium {
+        padding: 1.5rem 2.5rem;
+    }
+
+    @mixin atLarge {
+        padding: 2rem 3rem;
+    }
+
+    &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     li {
@@ -22,8 +33,14 @@
     &__item-title {
         margin-top: 3rem;
         padding: 0 1rem;
-        display: inline-block;
         font-size: 1.35rem;
+        text-align: center;
+
+        @mixin atLarge {
+            display: block;
+        }
+
+        margin-bottom: 2rem;
 
         @mixin atMedium {
             font-size: 1.6rem;
@@ -34,6 +51,7 @@
     &__item-description {
         margin-top: 0;
         margin-bottom: 2rem;
+        text-align: center;
     }
 
     &__hair-services {
@@ -48,9 +66,11 @@
 
         &__service-name {
             flex: 1;
+            text-align: left;
         }
 
         &__price {
+            text-align: right;
             font-weight: bold;
             flex: 1;
         }
@@ -65,8 +85,12 @@
                 flex: .8;
             }
 
-            @mixin atRegular {
+            @mixin atMedium {
                 flex: 1;
+            }
+
+            @mixin atRegular {
+                flex: 2;
             }
 
         }

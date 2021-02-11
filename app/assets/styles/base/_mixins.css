@@ -4,6 +4,12 @@
     }
 }
 
+@define-mixin atSemiSmall {
+    @media (min-width: 400px) {
+        @mixin-content;
+    }
+}
+
 @define-mixin atSmall {
     @media (min-width: 530px) {
         @mixin-content;

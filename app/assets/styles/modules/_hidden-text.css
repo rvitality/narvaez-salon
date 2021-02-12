@@ -8,6 +8,18 @@
 .visible {
     height: auto;
     opacity: 1;
-    transition: height 0ms 0ms,
-        opacity 600ms 0ms;
+    transition: height 0ms 0ms, opacity 600ms 0ms;
+
+    &.price-list {
+        margin: 3rem 0 1rem 0;
+        padding: 1rem 1.5rem;
+
+        @mixin atMedium {
+            padding: 1.5rem 2.5rem;
+        }
+
+        @mixin atLarge {
+            padding: 2rem 3rem;
+        }
+    }
 }

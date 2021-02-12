@@ -2,17 +2,6 @@
     border-top: 5px solid #000;
     border-bottom: 3px solid #333;
     background: rgb(230, 230, 230);
-    margin: 3rem 0;
-    padding: 1rem 1.5rem;
-    border: 1px solid red;
-
-    @mixin atMedium {
-        padding: 1.5rem 2.5rem;
-    }
-
-    @mixin atLarge {
-        padding: 2rem 3rem;
-    }
 
     &__heading {
         display: flex;
@@ -21,14 +10,12 @@
     }
 
     li {
-        font-size: .9rem;
+        font-size: 0.9rem;
 
         @mixin atSmall {
             font-size: 1rem;
         }
-
     }
-
 
     &__item-title {
         margin-top: 3rem;
@@ -45,7 +32,6 @@
         @mixin atMedium {
             font-size: 1.6rem;
         }
-
     }
 
     &__item-description {
@@ -55,7 +41,6 @@
     }
 
     &__hair-services {
-
         li {
             display: flex;
             align-items: center;
@@ -76,13 +61,13 @@
         }
 
         &__center-border {
-            flex: .2;
+            flex: 0.2;
             display: inline-block;
             border-bottom: 2px dotted #999;
             margin: 0 1rem;
 
             @mixin atSmall {
-                flex: .8;
+                flex: 0.8;
             }
 
             @mixin atMedium {
@@ -92,9 +77,6 @@
             @mixin atRegular {
                 flex: 2;
             }
-
         }
-
     }
-
 }

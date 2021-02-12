@@ -12,22 +12,26 @@ class RevealOnScroll {
 
     events() {
         window.addEventListener("scroll", this.scrollThrottle);
-        window.addEventListener("resize", debounce(() => {
-            this.browserHeight = window.innerHeight;
-        }, 333));
+        window.addEventListener(
+            "resize",
+            debounce(() => {
+                this.browserHeight = window.innerHeight;
+            }, 333)
+        );
     }
 
     calcCaller() {
-        this.revealItems.forEach(el => {
+        this.revealItems.forEach((el) => {
             if (el.isRevealed === false) {
-                this.calculateIfScrolledTo(el)
+                this.calculateIfScrolledTo(el);
             }
         });
     }
 
     calculateIfScrolledTo(el) {
         if (window.scrollY + this.browserHeight > el.offsetTop) {
-            let scrollPercent = (el.getBoundingClientRect().top / this.browserHeight) * 100;
+            let scrollPercent =
+                (el.getBoundingClientRect().top / this.browserHeight) * 100;
             if (scrollPercent < 75) {
                 el.classList.add("reveal-item--is-visible");
                 el.isRevealed = true;
@@ -40,10 +44,9 @@ class RevealOnScroll {
     }
 
     areHidden() {
-        this.revealItems.forEach(el => el.isRevealed = false);
+        this.revealItems.forEach((el) => (el.isRevealed = false));
         this.revealItems[this.revealItems.length - 1].isLastItem = true;
     }
-
 }
 
 export default RevealOnScroll;

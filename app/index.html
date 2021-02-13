@@ -3,6 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Roboto:wght@300&display=swap"
+            rel="stylesheet"
+        />
         <script
             src="https://kit.fontawesome.com/1cc4cfbe9e.js"
             crossorigin="anonymous"
@@ -67,11 +72,46 @@
             id="landing"
             data-matching-link="#landing-link"
         >
-            <img
+            <!-- <img
                 src="assets/edited-images/front.jpg"
                 alt=""
                 class="landing-section__image"
-            />
+            /> -->
+
+            <picture>
+                <source
+                    srcset="
+                        assets/images/landing/landing--large.jpg        1920w,
+                        assets/images/landing/landing--large-hi-dpi.jpg 3840w
+                    "
+                    media="(min-width: 1380px)"
+                />
+
+                <source
+                    srcset="
+                        assets/images/landing/landing--medium.jpg        1380w,
+                        assets/images/landing/landing--medium-hi-dpi.jpg 2760w
+                    "
+                    media="(min-width: 990px)"
+                />
+
+                <source
+                    srcset="
+                        assets/images/landing/landing--small.jpg         990w,
+                        assets/images/landing/landing--small-hi-dpi.jpg 1980w
+                    "
+                    media="(min-width: 640px)"
+                />
+
+                <img
+                    srcset="
+                        assets/images/landing/landing--smallest.jpg         640w,
+                        assets/images/landing/landing--smallest-hi-dpi.jpg 1280w
+                    "
+                    alt="Interior Front View of Salon"
+                    class="landing-section__image"
+                />
+            </picture>
 
             <div class="landing-section__text-content">
                 <div class="wrapper">

@@ -25,11 +25,16 @@
             <div class="wrapper wrapper--wide">
                 <div class="lower-nav">
                     <a href="" title="HOME" class="lower-nav__logo-link">
-                        <img
-                            src="assets/edited-images/logo.jpg"
-                            alt=""
-                            class="lower-nav__logo"
-                        />
+                        <picture>
+                            <source srcset="assets/images/logo.webp" />
+                            <source srcset="assets/images/logo.jpg" />
+                            <img
+                                src="assets/images/logo.jpg"
+                                class="lower-nav__logo"
+                                alt="Logo Image"
+                            />
+                        </picture>
+
                         <span class="lower-nav__main-title">
                             <span>Narvaez</span> Salon and Spa
                         </span>
@@ -81,32 +86,32 @@
             <picture>
                 <source
                     srcset="
-                        assets/images/landing/landing--large.jpg        1920w,
-                        assets/images/landing/landing--large-hi-dpi.jpg 3840w
+                        assets/images/landing/landing--large.jpg        1632w,
+                        assets/images/landing/landing--large-hi-dpi.jpg 3500w
                     "
-                    media="(min-width: 1380px)"
+                    media="(min-width: 890px)"
                 />
 
                 <source
                     srcset="
-                        assets/images/landing/landing--medium.jpg        1380w,
-                        assets/images/landing/landing--medium-hi-dpi.jpg 2760w
+                        assets/images/landing/landing--medium.jpg         1000w,
+                        assets/images/landing/landing--medium--hi-dpi.jpg 1500w
                     "
-                    media="(min-width: 990px)"
+                    media="(min-width: 620px)"
                 />
 
                 <source
                     srcset="
-                        assets/images/landing/landing--small.jpg         990w,
-                        assets/images/landing/landing--small-hi-dpi.jpg 1980w
+                        assets/images/landing/landing--small.jpg        700w,
+                        assets/images/landing/landing--small-hi-dpi.jpg 950w
                     "
-                    media="(min-width: 640px)"
+                    media="(min-width: 340px)"
                 />
 
                 <img
                     srcset="
-                        assets/images/landing/landing--smallest.jpg         640w,
-                        assets/images/landing/landing--smallest-hi-dpi.jpg 1280w
+                        assets/images/landing/landing--smallest.jpg        360w,
+                        assets/images/landing/landing--smallest-hi-dpi.jpg 550w
                     "
                     alt="Interior Front View of Salon"
                     class="landing-section__image"
@@ -220,26 +225,44 @@
                     <div class="about-us-section__slider-container">
                         <img
                             loading="lazy"
-                            src="assets/other-images/w customer - landscape.jpg"
-                            alt=""
+                            sizes="(min-width: 970px) 970px, 100vw"
+                            srcset="
+                                assets/images/slider/slider--image1-low-res.jpg  565w,
+                                assets/images/slider/slider--image1.jpg          970w,
+                                assets/images/slider/slider--image1-hi-dpi.jpg  1952w
+                            "
                             class="about-us-section__img slider--zoomin"
+                            alt="Slider Image 1"
                         />
+
                         <img
                             loading="lazy"
-                            src="assets/other-images/w customer - landscape-1.jpg"
-                            alt=""
+                            sizes="(min-width: 970px) 970px, 100vw"
+                            srcset="
+                                assets/images/slider/slider--image2-low-res.jpg  565w,
+                                assets/images/slider/slider--image2.jpg          970w,
+                                assets/images/slider/slider--image2-hi-dpi.jpg  1952w
+                            "
                             class="about-us-section__img slider--zoomin"
+                            alt="Slider Image 1"
                         />
+
                         <img
                             loading="lazy"
-                            src="assets/edited-images/w customer - landscape-2.jpg"
-                            alt=""
+                            sizes="(min-width: 970px) 970px, 100vw"
+                            srcset="
+                                assets/images/slider/slider--image3-low-res.jpg  565w,
+                                assets/images/slider/slider--image3.jpg          970w,
+                                assets/images/slider/slider--image3-hi-dpi.jpg  1952w
+                            "
                             class="about-us-section__img slider--zoomin"
+                            alt="Slider Image 1"
                         />
 
                         <div class="slider__prev-btn slider__nav-btn">
                             &#10094;
                         </div>
+
                         <div class="slider__next-btn slider__nav-btn">
                             &#10095;
                         </div>
@@ -255,9 +278,14 @@
                 <div class="about-us-section__second-container reveal-item">
                     <img
                         loading="lazy"
+                        sizes="(min-width: 970px) 970px, 100vw"
+                        srcset="
+                            assets/images/foot-spa/foot-spa-low-res.jpg  565w,
+                            assets/images/foot-spa/foot-spa.jpg          970w,
+                            assets/images/foot-spa/foot-spa-hi-res.jpg  1952w
+                        "
                         class="about-us-section__second-container__img"
-                        src="assets/other-images/w customer - portrait-4.jpg"
-                        alt=""
+                        alt="Foot Spa Image"
                     />
 
                     <div class="about-us-section__second-container__content">
@@ -283,7 +311,7 @@
                             >
                                 <img
                                     loading="lazy"
-                                    src="assets/icons/brand-positioning.png"
+                                    src="assets/images/icons/brand-positioning.png"
                                     alt=""
                                 />
                                 <div>
@@ -301,7 +329,7 @@
                             >
                                 <img
                                     loading="lazy"
-                                    src="assets/icons/couch.png"
+                                    src="assets/images/icons/couch.png"
                                     alt=""
                                 />
                                 <div>
@@ -319,8 +347,7 @@
                             >
                                 <img
                                     loading="lazy"
-                                    loading="lazy"
-                                    src="assets/icons/group.png"
+                                    src="assets/images/icons/group.png"
                                     alt=""
                                 />
                                 <div>
@@ -366,7 +393,7 @@
                         <div class="services-section__grid-image-container">
                             <img
                                 loading="lazy"
-                                src="assets/icons/foot-spa.png"
+                                src="assets/images/icons/foot-spa.png"
                                 alt="Foot Spa"
                             />
                         </div>
@@ -377,7 +404,7 @@
                         <div class="services-section__grid-image-container">
                             <img
                                 loading="lazy"
-                                src="assets/icons/scissors-and-comb.png"
+                                src="assets/images/icons/scissors-and-comb.png"
                                 alt=""
                             />
                         </div>
@@ -388,7 +415,7 @@
                         <div class="services-section__grid-image-container">
                             <img
                                 loading="lazy"
-                                src="assets/icons/shampoo.png"
+                                src="assets/images/icons/shampoo.png"
                                 alt=""
                             />
                         </div>
@@ -399,7 +426,7 @@
                         <div class="services-section__grid-image-container">
                             <img
                                 loading="lazy"
-                                src="assets/icons/woman-with-long-hair.png"
+                                src="assets/images/icons/woman-with-long-hair.png"
                                 alt=""
                             />
                         </div>
@@ -410,7 +437,7 @@
                         <div class="services-section__grid-image-container">
                             <img
                                 loading="lazy"
-                                src="assets/icons/nail-polish (1).png"
+                                src="assets/images/icons/nail-polish (1).png"
                                 alt=""
                             />
                         </div>
@@ -834,7 +861,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/1 - a.jpg"
+                                src="assets/images/before-and-after/1 - a.jpg"
                                 alt=""
                             />
                             <span>BEFORE</span>
@@ -842,7 +869,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/1 - b.jpg"
+                                src="assets/images/before-and-after/1 - b.jpg"
                                 alt=""
                             />
                             <span>AFTER</span>
@@ -853,7 +880,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/2 - a.jpg"
+                                src="assets/images/before-and-after/2 - a.jpg"
                                 alt=""
                             />
                             <span>BEFORE</span>
@@ -861,7 +888,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/2 - b.jpg"
+                                src="assets/images/before-and-after/2 - b.jpg"
                                 alt=""
                             />
                             <span>AFTER</span>
@@ -872,7 +899,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/3 - a.jpg"
+                                src="assets/images/before-and-after/3 - a.jpg"
                                 alt=""
                             />
                             <span>BEFORE</span>
@@ -880,7 +907,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/3 - b.jpg"
+                                src="assets/images/before-and-after/3 - b.jpg"
                                 alt=""
                             />
                             <span>AFTER</span>
@@ -891,7 +918,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/4 - a.jpg"
+                                src="assets/images/before-and-after/4 - a.jpg"
                                 alt=""
                             />
                             <span>BEFORE</span>
@@ -899,7 +926,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/4 - b.jpg"
+                                src="assets/images/before-and-after/4 - b.jpg"
                                 alt=""
                             />
                             <span>AFTER</span>
@@ -910,7 +937,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/5 - a.jpg"
+                                src="assets/images/before-and-after/5 - a.jpg"
                                 alt=""
                             />
                             <span>BEFORE</span>
@@ -918,7 +945,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/5 - b.jpg"
+                                src="assets/images/before-and-after/5 - b.jpg"
                                 alt=""
                             />
                             <span>AFTER</span>
@@ -929,7 +956,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/6 - a.jpg"
+                                src="assets/images/before-and-after/6 - a.jpg"
                                 alt=""
                             />
                             <span>BEFORE</span>
@@ -937,7 +964,7 @@
                         <div>
                             <img
                                 loading="lazy"
-                                src="assets/before and after/6 - b.jpg"
+                                src="assets/images/before-and-after/6 - b.jpg"
                                 alt=""
                             />
                             <span>AFTER</span>

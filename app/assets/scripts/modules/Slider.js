@@ -16,9 +16,11 @@ class Slider {
         this.plusSlides(this.prevBtn, -1);
         this.plusSlides(this.nextBtn, 1);
 
-        this.dots.forEach(dot => dot.addEventListener("click", () => {
-            this.currentSlide(+dot.id);
-        }));
+        this.dots.forEach((dot) =>
+            dot.addEventListener("click", () => {
+                this.currentSlide(+dot.id);
+            })
+        );
     }
 
     autoSlide() {
@@ -67,10 +69,7 @@ class Slider {
 
         this.sliderImages[counter].style.display = "inline-block";
         this.dots[counter].classList.add("active");
-
     }
-
-
 }
 
 export default Slider;

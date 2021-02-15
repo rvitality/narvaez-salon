@@ -4,49 +4,73 @@
     visibility: hidden;
     position: fixed;
     transform: scale(1.2);
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 9999;
-    background-color: rgba(0, 0, 0, .93);
+    background-color: rgba(0, 0, 0, 0.93);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 
     &__main-title {
-        font-size: 4rem;
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 1.5rem;
+
+        @mixin atSmall {
+            font-size: 3.3rem;
+        }
+
+        @mixin atMedium {
+            font-size: 4rem;
+        }
     }
 
     &__envelope {
         display: inline-block;
         color: $mainColor;
         border-radius: 50%;
-        font-size: 4rem;
-        margin-bottom: .8rem;
+        margin-bottom: 0.8rem;
+        font-size: 3rem;
+
+        @mixin atSmall {
+            font-size: 3.3rem;
+        }
+
+        @mixin atMedium {
+            font-size: 4rem;
+        }
     }
 
     &__description {
-        font-size: 1.3rem;
         max-width: 650px;
         line-height: 1.35;
+
+        @mixin atSmall {
+            font-size: 1.3rem;
+        }
     }
 
     &__close-btn {
         cursor: pointer;
         color: #ddd;
         position: absolute;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         transform: scaleX(1.2);
-        top: 25px;
-        right: 25px;
+        top: 15px;
+        right: 20px;
         font-weight: bold;
-        transition: color .3s ease;
+        transition: color 0.3s ease;
+
+        @mixin atSmall {
+            font-size: 1.5rem;
+            top: 25px;
+            right: 25px;
+        }
     }
 
     &__social-icons {
@@ -56,28 +80,41 @@
         a {
             position: relative;
             display: inline-block;
-            height: 75px;
-            width: 75px;
-            margin: 0 1rem;
             background: #333;
             font-size: 2rem;
-            transition: all .3s ease-in-out;
+            transition: all 0.3s ease-in-out;
             border-radius: 5px;
+            height: 45px;
+            width: 45px;
+            margin: 0 0.5rem;
+
+            @mixin atSmall {
+                margin: 0 1rem;
+                height: 75px;
+                width: 75px;
+            }
 
             i {
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-            }
+                font-size: 1.2rem;
 
+                @mixin atSmall {
+                    font-size: 1.7rem;
+                }
+
+                @mixin atMedium {
+                    font-size: 2rem;
+                }
+            }
         }
 
         a:hover {
             color: #333;
             background: #fff;
         }
-
     }
 
     &__close-btn:hover {
@@ -89,6 +126,4 @@
         opacity: 1;
         visibility: visible;
     }
-
-
 }

@@ -1,7 +1,7 @@
 .lower-nav {
     position: relative;
-    padding: .7rem 0;
-    transition: all .3s ease-out;
+    padding: 0.7rem 0;
+    transition: all 0.3s ease-out;
 
     @mixin atSmallest {
         display: flex;
@@ -18,8 +18,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 70vw;
-        transition: all .3s ease-in-out;
+        max-width: 80vw;
+        transition: all 0.3s ease-in-out;
 
         @mixin atLarge {
             flex: 1;
@@ -38,24 +38,26 @@
 
     &__main-title {
         font-weight: bold;
-        letter-spacing: .1rem;
+        letter-spacing: 0.1rem;
         text-transform: uppercase;
-        font-size: .9rem;
+        font-size: 0.9rem;
         text-align: start;
         line-height: 1.35;
+        margin-left: 0.5rem;
 
         &--text-center {
             text-align: center;
         }
 
         @mixin atSmallest {
-            letter-spacing: .3rem;
+            margin-left: 0.8rem;
+            letter-spacing: 0.3rem;
         }
 
         @mixin atSmall {
             line-height: 1;
             font-size: 1.1rem;
-            letter-spacing: .3rem;
+            letter-spacing: 0.3rem;
         }
 
         @mixin atRegular {
@@ -65,17 +67,19 @@
         @mixin atMediumLarge {
             font-size: 1.6rem;
         }
-
-
     }
 
     &__logo {
-        width: 55px;
+        width: 45px;
         object-fit: contain;
         margin-right: 1rem;
 
         &--margin-bottom {
             margin-bottom: 1rem;
+        }
+
+        @mixin atSmall {
+            width: 55px;
         }
 
         @mixin atMedium {
@@ -87,7 +91,5 @@
             width: 50px;
             border-radius: 50%;
         }
-
     }
-
 }

@@ -147,7 +147,7 @@
                 }
 
                 h3 {
-                    margin-bottom: 0;
+                    margin-bottom: 0.5rem;
                     margin-top: 0.5rem;
 
                     @mixin atRegular {
@@ -156,7 +156,10 @@
 
                     @mixin atMedium {
                         margin-top: 0;
-                        margin-bottom: 0.5rem;
+                    }
+
+                    @mixin atLarge {
+                        margin-bottom: 0;
                     }
                 }
 

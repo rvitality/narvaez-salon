@@ -11,10 +11,16 @@ new StickyHeader();
 new RevealOnScroll();
 new Modal();
 new Slider();
-new Showmore("#showmore-btn", ".about-us-section__hidden-text", "Read More <i class='fas fa-angle-down'></i>");
-new Showmore("#show-price-list-btn", ".price-list", "Price List <i class='fas fa-angle-down'></i>");
-
-console.log("Page height:", document.body.scrollHeight);
+new Showmore(
+    "#showmore-btn",
+    ".about-us-section__hidden-text",
+    "Read More <i class='fas fa-angle-down'></i>"
+);
+new Showmore(
+    "#show-price-list-btn",
+    ".price-list",
+    "Price List <i class='fas fa-angle-down'></i>"
+);
 
 if (module.hot) {
     module.hot.accept();

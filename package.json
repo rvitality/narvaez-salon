@@ -1,38 +1,47 @@
 {
-  "name": "narvaez-salon",
-  "version": "1.0.0",
-  "description": "Narvaez Salon and Spa",
-  "main": "index.js",
-  "scripts": {
-    "dev": "webpack serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rvitality/narvaez-salon.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rvitality/narvaez-salon/issues"
-  },
-  "homepage": "https://github.com/rvitality/narvaez-salon#readme",
-  "dependencies": {
-    "lodash": "^4.17.20",
-    "normalize.css": "^8.0.1"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.2.1",
-    "css-loader": "^5.0.1",
-    "postcss-import": "^14.0.0",
-    "postcss-loader": "^4.1.0",
-    "postcss-mixins": "^7.0.2",
-    "postcss-nested": "^5.0.3",
-    "postcss-simple-vars": "^6.0.2",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.13.0",
-    "webpack-cli": "^4.3.1",
-    "webpack-dev-server": "^3.11.2"
-  }
+    "name": "narvaez-salon",
+    "version": "1.0.0",
+    "description": "Narvaez Salon and Spa",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack serve",
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rvitality/narvaez-salon.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rvitality/narvaez-salon/issues"
+    },
+    "homepage": "https://github.com/rvitality/narvaez-salon#readme",
+    "dependencies": {
+        "lodash": "^4.17.20",
+        "normalize.css": "^8.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.12.17",
+        "@babel/preset-env": "^7.12.17",
+        "autoprefixer": "^10.2.1",
+        "babel-loader": "^8.2.2",
+        "clean-webpack-plugin": "^3.0.0",
+        "css-loader": "^5.0.1",
+        "cssnano-webpack-plugin": "^1.0.3",
+        "fs-extra": "^9.1.0",
+        "html-webpack-plugin": "^5.1.0",
+        "mini-css-extract-plugin": "^1.3.8",
+        "postcss-import": "^14.0.0",
+        "postcss-loader": "^4.1.0",
+        "postcss-mixins": "^7.0.2",
+        "postcss-nested": "^5.0.3",
+        "postcss-simple-vars": "^6.0.2",
+        "style-loader": "^2.0.0",
+        "webpack": "^5.13.0",
+        "webpack-cli": "^4.3.1",
+        "webpack-dev-server": "^3.11.2"
+    }
 }

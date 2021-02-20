@@ -7,17 +7,22 @@ class Modal {
     }
 
     events() {
-        this.modal.addEventListener("click", e => {
-            if (e.target.classList.contains("modal__close-btn") || e.target.classList.contains("modal")) {
+        this.modal.addEventListener("click", (e) => {
+            if (
+                e.target.classList.contains("modal__close-btn") ||
+                e.target.classList.contains("modal")
+            ) {
                 this.closeModal();
             }
         });
 
         // open modal
-        this.openModalButtons.forEach(el => el.addEventListener("click", e => this.openModal(e)));
+        this.openModalButtons.forEach((el) =>
+            el.addEventListener("click", (e) => this.openModal(e))
+        );
 
         // esc key, close modal
-        document.addEventListener("keyup", e => {
+        document.addEventListener("keyup", (e) => {
             if (e.keyCode === 27 || e.key === "Escape") {
                 this.closeModal();
             }
@@ -34,24 +39,26 @@ class Modal {
     }
 
     injectHTML() {
-        document.body.insertAdjacentHTML("beforeend", `
+        document.body.insertAdjacentHTML(
+            "beforeend",
+            `
             <div class="modal">
                 <div class="wrapper">
                     <a href="#" class="modal__envelope"><i class="fas fa-envelope"></i></a>
                     <h1 class="modal__main-title">Get in <span class="bold">Touch</span></h1>
                     <span class="border-bottom"></span>
-                    <p class="modal__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto ipsum quae autem dicta similique earum.</p>
+                    <p class="modal__description">Reach us through our social media accounts/page for appointments or call us with the provided phone number in the home page.</p>
                     <span class="modal__close-btn">X</span>
                     <div class="modal__social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/narvaezsalonandspa" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-        `);
+        `
+        );
     }
-
 }
 
 export default Modal;

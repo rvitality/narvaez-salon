@@ -1,0 +1,65 @@
+.footer {
+    margin-top: 5rem;
+    background-color: #333;
+    color: #fff;
+    padding: 2.5rem 0 1.5rem 0;
+    text-align: center;
+
+    @mixin atMedium {
+        text-align: left;
+    }
+
+    .wrapper {
+        @mixin atMedium {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    p {
+        margin: 0.1rem 0;
+        padding: 0;
+    }
+
+    &__credits {
+        color: #ccc;
+        font-size: 0.8rem;
+
+        @mixin atSmall {
+            font-size: 0.9rem;
+        }
+    }
+
+    &__address {
+        font-size: 0.85rem;
+        margin-top: 0.3rem !important;
+
+        @mixin atSmall {
+            margin-top: 0.5rem !important;
+            font-size: 1.02rem;
+        }
+
+        @mixin atMedium {
+            margin-top: 0rem !important;
+            font-size: 1.02rem;
+        }
+    }
+
+    &__social-icons {
+        margin-top: 1.2rem;
+        font-size: 0.9rem;
+
+        a {
+            margin: 0 0.5rem;
+        }
+
+        a:hover {
+            color: $mainColor;
+        }
+
+        @mixin atRegular {
+            font-size: 1rem;
+        }
+    }
+}

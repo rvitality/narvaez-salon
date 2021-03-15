@@ -2,6 +2,7 @@
     border-top: 5px solid #000;
     border-bottom: 3px solid #333;
     background: rgb(230, 230, 230);
+    width: 60%;
 
     &__heading {
         display: flex;

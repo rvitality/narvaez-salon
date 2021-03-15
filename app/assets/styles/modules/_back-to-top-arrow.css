@@ -1,0 +1,33 @@
+.back-to-top {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    background: $mainColor;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.9s ease;
+    z-index: -500;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.9rem;
+    display: none;
+
+    @mixin atSemiSmall {
+        font-size: 1.2rem;
+        display: block;
+    }
+
+    @mixin atRegular {
+        font-size: 1.4rem;
+        padding: 0.5rem 1.1rem;
+    }
+
+    &--show {
+        opacity: 0.8;
+        z-index: 50;
+    }
+}
+
+.back-to-top:hover {
+    background: #f3c302;
+}

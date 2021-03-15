@@ -933,6 +933,7 @@ var StickyHeader = /*#__PURE__*/function () {
     StickyHeader_classCallCheck(this, StickyHeader);
 
     this.headerSection = document.querySelector(".header-section");
+    this.backToTopBtn = document.querySelector(".back-to-top");
     this.pageSections = document.querySelectorAll(".page-section");
     this.browserHeight = window.innerHeight;
     this.previousScrollY = window.scrollY;
@@ -950,6 +951,12 @@ var StickyHeader = /*#__PURE__*/function () {
       window.addEventListener("resize", debounce_default()(function () {
         return _this.browserHeight = window.innerHeight;
       }, 333));
+      this.backToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          left: 0,
+          top: 0
+        });
+      });
     }
   }, {
     key: "runOnScroll",
@@ -962,6 +969,13 @@ var StickyHeader = /*#__PURE__*/function () {
         this.headerSection.classList.add("header-section--dark");
       } else {
         this.headerSection.classList.remove("header-section--dark");
+      } // back to top arrow
+
+
+      if (window.scrollY > 600) {
+        this.backToTopBtn.classList.add("back-to-top--show");
+      } else {
+        this.backToTopBtn.classList.remove("back-to-top--show");
       }
 
       this.pageSections.forEach(function (el) {

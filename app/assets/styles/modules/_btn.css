@@ -2,13 +2,13 @@
     cursor: pointer;
     color: #000;
     font-weight: bold;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     display: inline-block;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     text-transform: uppercase;
     background: $mainColor;
     padding: 1rem 1.4rem;
-    font-size: .8rem;
+    font-size: 0.8rem;
 
     @mixin atSmall {
         padding: 1.3rem 2rem;
@@ -25,8 +25,8 @@
     }
 
     &--small {
-        padding: .9rem 1.5rem;
-        font-size: .85rem;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.85rem;
         border: 0;
     }
 
@@ -34,8 +34,8 @@
         background: $mainColor;
     }
 
-    &--transform-scale-animation:hover {
-        transform: scale(1.1);
+    &--hover-change-color:hover {
+        background: $hoverColor;
     }
 
     &--filled-bg {
@@ -49,5 +49,4 @@
     &--margin-top {
         margin-top: 2rem;
     }
-
 }

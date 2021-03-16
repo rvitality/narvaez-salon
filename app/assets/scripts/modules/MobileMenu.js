@@ -16,21 +16,35 @@ class MobileMenu {
     }
 
     toggleTheMenu() {
-
         this.primaryNav.classList.toggle("primary-nav--is-visible");
         this.lowerNav.classList.toggle("lower-nav--is-flex-col");
-        this.headerSection.classList.toggle("header-section--is-expanded");
+
         this.menuIconBtn.classList.toggle("menu-icon__close-btn");
-        this.logoTextElement.classList.toggle("lower-nav__main-title--text-center");
+        this.logoTextElement.classList.toggle(
+            "lower-nav__main-title--text-center"
+        );
         this.logoImage.classList.toggle("lower-nav__logo--margin-bottom");
 
-        this.logoContainer.classList.toggle("lower-nav__logo-link--display-flex-col");
-        this.logoContainer.classList.toggle("lower-nav__logo-link--remove-max-width");
+        this.logoContainer.classList.toggle(
+            "lower-nav__logo-link--display-flex-col"
+        );
+        this.logoContainer.classList.toggle(
+            "lower-nav__logo-link--remove-max-width"
+        );
 
         this.borderBottom.classList.toggle("border-bottom--show");
+
+        this.headerSection.classList.toggle("header-section--is-expanded");
+
+        if (
+            window.scrollY > 60 &&
+            !this.headerSection.classList.contains("header-section--dark")
+        ) {
+            this.headerSection.classList.add("header-section--dark");
+        } else {
+            this.headerSection.classList.remove("header-section--dark");
+        }
     }
-
-
 }
 
 export default MobileMenu;

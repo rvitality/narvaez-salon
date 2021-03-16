@@ -1,5 +1,6 @@
 import throttle from "lodash/throttle";
 import debounce from "lodash/debounce";
+import { times } from "lodash";
 
 class StickyHeader {
     constructor() {
@@ -29,7 +30,12 @@ class StickyHeader {
     runOnScroll() {
         this.determineScrollDirection();
 
-        if (window.scrollY > 60) {
+        if (
+            window.scrollY > 60 &&
+            !this.headerSection.classList.contains(
+                "header-section--is-expanded"
+            )
+        ) {
             this.headerSection.classList.add("header-section--dark");
         } else {
             this.headerSection.classList.remove("header-section--dark");

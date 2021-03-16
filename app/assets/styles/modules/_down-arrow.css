@@ -4,50 +4,6 @@
     justify-content: center;
 
     i {
-        margin-left: .7rem;
+        margin-left: 0.7rem;
     }
-
-}
-
-.down-arrow:hover {
-    animation: bounce 2s linear infinite;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0px);
-    }
-
-    10% {
-        transform: translateY(-5px);
-    }
-
-    20% {
-        transform: translateY(5px);
-    }
-
-    30% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-
-    70% {
-        transform: translateY(5px);
-    }
-
-    80% {
-        transform: translateY(15px);
-    }
-
-    90% {
-        transform: translateY(8px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-
 }

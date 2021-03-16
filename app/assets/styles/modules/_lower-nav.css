@@ -51,6 +51,7 @@
         font-size: 0.82rem;
         text-align: center;
         line-height: 1.35;
+        transition: all 0.3s ease;
 
         &--text-center {
             text-align: center;

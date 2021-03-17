@@ -945,6 +945,7 @@ var StickyHeader = /*#__PURE__*/function () {
     this.landingSection = document.querySelector(".landing-section");
     this.pageSections = document.querySelectorAll(".page-section");
     this.navLinks = document.querySelectorAll(".nav__link");
+    this.backToTopBtn = document.querySelector(".back-to-top");
     this.events();
   }
 
@@ -953,6 +954,14 @@ var StickyHeader = /*#__PURE__*/function () {
     value: function events() {
       this.runObserver();
       this.observeSections();
+      this.backToTop();
+    }
+  }, {
+    key: "removeHighlightedLinks",
+    value: function removeHighlightedLinks() {
+      this.navLinks.forEach(function (el) {
+        return el.classList.remove("primary-nav--is-current-link");
+      });
     }
   }, {
     key: "runObserver",
@@ -963,10 +972,19 @@ var StickyHeader = /*#__PURE__*/function () {
         var _entries = _slicedToArray(entries, 1),
             entry = _entries[0];
 
-        if (!entry.isIntersecting) {
-          _this.headerSection.classList.toggle("header-section--dark");
+        if (!entry.isIntersecting && !_this.headerSection.classList.contains("header-section--is-expanded")) {
+          _this.headerSection.classList.add("header-section--dark");
+
+          _this.backToTopBtn.classList.add("back-to-top--show");
         } else {
           _this.headerSection.classList.remove("header-section--dark");
+
+          _this.backToTopBtn.classList.remove("back-to-top--show"); // specifically for the home link
+
+
+          _this.removeHighlightedLinks();
+
+          _this.navLinks[0].classList.add("primary-nav--is-current-link");
         }
       };
 
@@ -977,20 +995,26 @@ var StickyHeader = /*#__PURE__*/function () {
       oberver.observe(this.landingSection);
     }
   }, {
+    key: "backToTop",
+    value: function backToTop() {
+      var _this2 = this;
+
+      this.backToTopBtn.addEventListener("click", function (e) {
+        _this2.landingSection.scrollIntoView();
+      });
+    }
+  }, {
     key: "observeSections",
     value: function observeSections() {
-      var _this2 = this;
+      var _this3 = this;
 
       var highlightLink = function highlightLink(entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            // console.log(entry.target);
             // find nav link
-            var link = document.getElementById("".concat(entry.target.id, "-link")); // console.log(link);
+            var link = document.getElementById("".concat(entry.target.id, "-link"));
 
-            _this2.navLinks.forEach(function (el) {
-              return el.classList.remove("primary-nav--is-current-link");
-            });
+            _this3.removeHighlightedLinks();
 
             link.classList.add("primary-nav--is-current-link");
           }

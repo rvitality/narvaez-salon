@@ -1,4 +1,5 @@
 .back-to-top {
+    box-sizing: border-box;
     position: fixed;
     right: 2%;
     bottom: 2%;
@@ -8,24 +9,27 @@
     z-index: -500;
     font-size: 1.1rem;
     max-height: 0;
+    opacity: 0.9;
     transition: max-height 0.15s ease-out;
-    opacity: 0.7;
-    padding: 0.3rem 0.9rem;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 30px;
 
     @mixin atSemiSmall {
-        opacity: 1;
         font-size: 1.2rem;
-        display: block;
+        height: 36px;
+        width: 45px;
     }
 
     @mixin atRegular {
+        opacity: 1;
         font-size: 1.4rem;
-        padding: 0.5rem 1.1rem;
     }
 
     &--show {
-        max-height: 30px;
+        max-height: 36px;
         z-index: 50;
         transition: max-height 0.25s ease-in;
     }

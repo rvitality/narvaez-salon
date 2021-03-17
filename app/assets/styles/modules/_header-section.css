@@ -28,7 +28,7 @@
     z-index: -1;
     height: 0;
     transition: all 0.5s ease-in-out;
-    opacity: 0.75;
+    opacity: 0.85;
     background: #000;
     box-shadow: 0 2px 8px -2px #000;
 }

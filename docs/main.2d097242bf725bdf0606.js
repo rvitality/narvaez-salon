@@ -971,21 +971,25 @@ var StickyHeader = /*#__PURE__*/function () {
 
       var stickyNav = function stickyNav(entries) {
         var _entries = _slicedToArray(entries, 1),
-            entry = _entries[0];
+            entry = _entries[0]; // BACKGROUND OF NAVBAR
+
 
         if (!entry.isIntersecting && !_this.headerSection.classList.contains("header-section--is-expanded")) {
           _this.headerSection.classList.add("header-section--dark");
-
-          _this.backToTopBtn.classList.add("back-to-top--show");
         } else {
-          _this.headerSection.classList.remove("header-section--dark");
-
-          _this.backToTopBtn.classList.remove("back-to-top--show"); // specifically for the home link
+          _this.headerSection.classList.remove("header-section--dark"); // specifically for the home link
 
 
           _this.removeHighlightedLinks();
 
           _this.navLinks[0].classList.add("primary-nav--is-current-link");
+        } // BACK TO TOP BUTTON
+
+
+        if (!entry.isIntersecting) {
+          _this.backToTopBtn.classList.add("back-to-top--show");
+        } else {
+          _this.backToTopBtn.classList.remove("back-to-top--show");
         }
       };
 

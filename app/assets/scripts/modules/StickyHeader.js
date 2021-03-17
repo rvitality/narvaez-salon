@@ -24,6 +24,7 @@ class StickyHeader {
         const stickyNav = (entries) => {
             const [entry] = entries;
 
+            // BACKGROUND OF NAVBAR
             if (
                 !entry.isIntersecting &&
                 !this.headerSection.classList.contains(
@@ -31,14 +32,19 @@ class StickyHeader {
                 )
             ) {
                 this.headerSection.classList.add("header-section--dark");
-                this.backToTopBtn.classList.add("back-to-top--show");
             } else {
                 this.headerSection.classList.remove("header-section--dark");
-                this.backToTopBtn.classList.remove("back-to-top--show");
 
                 // specifically for the home link
                 this.removeHighlightedLinks();
                 this.navLinks[0].classList.add("primary-nav--is-current-link");
+            }
+
+            // BACK TO TOP BUTTON
+            if (!entry.isIntersecting) {
+                this.backToTopBtn.classList.add("back-to-top--show");
+            } else {
+                this.backToTopBtn.classList.remove("back-to-top--show");
             }
         };
 

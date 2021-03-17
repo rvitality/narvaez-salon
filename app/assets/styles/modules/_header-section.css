@@ -1,7 +1,12 @@
 .header-section {
+    box-sizing: border-box;
     width: 100vw;
     position: fixed;
     z-index: 5000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
 
     &--dark::before {
         height: 100% !important;

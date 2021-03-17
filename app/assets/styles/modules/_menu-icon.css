@@ -1,13 +1,16 @@
 .menu-icon {
-    position: absolute;
-    right: 20px;
-    top: 25px;
+    position: relative;
     cursor: pointer;
     z-index: 999999;
     width: 20px;
     height: 19px;
     transition: all 0.3s ease-in-out;
-    transition: transform 0.3s ease-out;
+
+    &--position-absolute {
+        position: absolute;
+        right: 27px;
+        top: 22px;
+    }
 
     @mixin atLarge {
         display: none;

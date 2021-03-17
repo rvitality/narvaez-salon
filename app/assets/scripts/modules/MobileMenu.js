@@ -16,10 +16,12 @@ class MobileMenu {
     }
 
     toggleTheMenu() {
+        this.menuIconBtn.classList.toggle("menu-icon__close-btn");
+        this.menuIconBtn.classList.toggle("menu-icon--position-absolute");
+
         this.primaryNav.classList.toggle("primary-nav--is-visible");
         this.lowerNav.classList.toggle("lower-nav--is-flex-col");
 
-        this.menuIconBtn.classList.toggle("menu-icon__close-btn");
         this.logoTextElement.classList.toggle(
             "lower-nav__main-title--text-center"
         );

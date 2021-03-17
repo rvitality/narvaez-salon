@@ -2,6 +2,7 @@
     position: relative;
     padding: 0.7rem 0;
     transition: all 0.3s ease-out;
+    width: 100vw;
 
     @mixin atSmallest {
         display: flex;
@@ -11,6 +12,7 @@
 
     &--is-flex-col {
         flex-direction: column;
+        width: 100vw;
     }
 
     /* LOGO IMAGE & TEXT */
@@ -18,7 +20,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 75vw;
         transition: all 0.3s ease-in-out;
 
         @mixin atSmallest {
@@ -45,28 +46,26 @@
     }
 
     &__main-title {
-        font-weight: bold;
-        letter-spacing: 0.1rem;
         text-transform: uppercase;
         font-size: 0.82rem;
         text-align: center;
-        line-height: 1.35;
         transition: all 0.3s ease;
+        font-family: "Josefin Sans", sans-serif;
+        letter-spacing: 0.1rem;
 
         &--text-center {
             text-align: center;
         }
 
         @mixin atSmallest {
-            font-size: 0.9rem;
+            font-size: 1rem;
             letter-spacing: 0.2rem;
         }
 
         @mixin atSmall {
             text-align: left;
-            line-height: 1;
-            font-size: 1.1rem;
-            letter-spacing: 0.3rem;
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
         }
 
         @mixin atRegular {
@@ -79,24 +78,16 @@
     }
 
     &__logo {
-        width: 45px;
+        width: 35px;
         object-fit: contain;
+        margin-right: 0.5rem;
 
         &--margin-bottom {
             margin-bottom: 1rem;
         }
 
-        @mixin atSmallest {
-            margin-right: 1rem;
-        }
-
         @mixin atSmall {
-            width: 50px;
-        }
-
-        @mixin atMedium {
-            width: 65px;
-            border-radius: 50%;
+            width: 40px;
         }
 
         @mixin atLarge {

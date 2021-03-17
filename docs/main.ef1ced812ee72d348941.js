@@ -984,8 +984,9 @@ var StickyHeader = /*#__PURE__*/function () {
       var highlightLink = function highlightLink(entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
+            // console.log(entry.target);
             // find nav link
-            var link = document.getElementById("".concat(entry.target.id, "-link"));
+            var link = document.getElementById("".concat(entry.target.id, "-link")); // console.log(link);
 
             _this2.navLinks.forEach(function (el) {
               return el.classList.remove("primary-nav--is-current-link");
@@ -998,7 +999,7 @@ var StickyHeader = /*#__PURE__*/function () {
 
       var observer = new IntersectionObserver(highlightLink, {
         root: null,
-        threshold: 0.5
+        threshold: 0.3
       });
       this.pageSections.forEach(function (section) {
         return observer.observe(section);

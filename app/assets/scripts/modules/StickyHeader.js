@@ -34,10 +34,14 @@ class StickyHeader {
         const highlightLink = (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
+                    // console.log(entry.target);
                     // find nav link
+
                     const link = document.getElementById(
                         `${entry.target.id}-link`
                     );
+
+                    // console.log(link);
 
                     this.navLinks.forEach((el) =>
                         el.classList.remove("primary-nav--is-current-link")
@@ -50,7 +54,7 @@ class StickyHeader {
 
         const observer = new IntersectionObserver(highlightLink, {
             root: null,
-            threshold: 0.5,
+            threshold: 0.3,
         });
 
         this.pageSections.forEach((section) => observer.observe(section));
